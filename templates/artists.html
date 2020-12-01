@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get my tattoo</title>
+</head>
+<body>
+    {% for artist in artists %}
+        {{ artist.artist_name }}<br>
+        {{ artist.address }}<br>
+        {{ artist.city }}<br>
+        {{ artist.phone }}<br>
+        {{ artist.email }}<br>
+        {{ artist.instagram }}<br>
+        {{ artist.facebook }}<br>
+        {{ artist.profile_url }}<br>
+        {{ artist.languages }}<br>
+        {{ artist.style }}<br>
+        {{ artist.bio }}<br>
+        {{ artist.created_by }}<br>
+        {{ artist.photo_1 }}<br>
+        {{ artist.photo_2 }}<br>
+        {{ artist.photo_3 }}<br>
+        <br>
+    {% endfor %}
+</body>
+</html>
