@@ -1,0 +1,60 @@
+/* Colours */
+body{
+    background-color: black;
+    color: gray;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+a.navbar-brand.logo, a.nav-link {
+    color: gray;
+}
+
+/* Typography */
+main div h1.center{
+    font-size: 30px;
+}
+
+main div h2.center{
+    font-size: 16px;
+}
+
+/* Placing */
+
+.center{
+    text-align: center;
+}
+
+.introduction{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Navbar */
+.logo {
+    text-transform: uppercase;
+    margin: 16px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.logo span{
+    font-size: 15px;
+    float: left;
+    margin-left: 25%;
+}
+
+.navbar-collapse{
+    margin-left: 70px;
+}
+
+.nav-item{
+    margin: 20px;
+}
+
+/* Show artists */
+.background-image{
+    max-height: 500px;
+}
