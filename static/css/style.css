@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 /* Colours */
 body{
     background-color: black;
@@ -13,11 +15,23 @@ a.navbar-brand.logo, a.nav-link {
 }
 
 /* Typography */
+.logo{
+    font-family: "Montserrat", sans-serif;
+}
+
 main div h1.center{
-    font-size: 30px;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 main div h2.center{
+    font-size: 16px;
+}
+
+.subtitle{
+    text-transform: uppercase;
     font-size: 16px;
 }
 
@@ -29,7 +43,7 @@ main div h2.center{
 
 .introduction{
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 /* Navbar */
@@ -58,3 +72,24 @@ main div h2.center{
 .background-image{
     max-height: 500px;
 }
+
+.subtitle{
+    margin-bottom: 30px;
+}
+
+.link{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.link:hover, .link:active{
+    color: white;
+    font-weight: bold;
+}
+
+.img-panel{
+height: 400px;
+object-fit: cover;
+}
+
+/* Media Queries */
