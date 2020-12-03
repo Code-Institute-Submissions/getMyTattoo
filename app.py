@@ -5,6 +5,7 @@ from flask import (Flask, flash,
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -25,6 +26,11 @@ bootstrap = Bootstrap(app)
 def get_artists():
     artists = mongo.db.artists.find()
     return render_template("artists.html", artists=artists)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__":

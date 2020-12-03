@@ -92,4 +92,50 @@ height: 400px;
 object-fit: cover;
 }
 
+/* Form panel and background */
+.background-image{
+  background-image: url("/static/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 50px;
+  background-size: 500px 500px;
+  height: 500px;
+  padding: 0;
+}
+
+.sign-panel{
+    height: 300px;
+    background-color: gray;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.form-input{
+    border:none;
+    border-bottom: 1px solid black;
+    padding: 5px 30px;
+    outline: none;
+    background-color: gray;
+    border-radius: 0px;
+}
+
+.form-input:hover{
+    border-bottom: 2px solid antiquewhite;
+    cursor: pointer;
+}
+
+/* Code adapted from https://www.w3schools.com/howto/howto_css_placeholder.asp */
+.form-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.form-input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+.form-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: black
+}
 /* Media Queries */

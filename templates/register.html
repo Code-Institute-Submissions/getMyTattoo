@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid background-image">
+	<div class="row">
+		<form class="col col-md-6 offset-md-1 sign-panel">
+            <h3 class="subtitle">Register</h3>
+			<div class="form-group">
+				<label for="username" class="d-none">Username</label>
+				<input type="text" class="form-control form-input" id="username" placeholder="Username">
+			</div>
+            <div class="form-group">
+				<label for="password" class="d-none">Username</label>
+				<input type="text" class="form-control form-input" id="password" placeholder="Password">
+			</div>
+            <button class="btn btn-light" type="submit">Button</button>
+		</form>
+	</div>
+</div>
+{% endblock %}
