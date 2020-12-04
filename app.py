@@ -39,7 +39,7 @@ def register():
             return redirect(url_for("register"))
 
         register = {
-            "username": request.form.get("username"),
+            "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
 
@@ -47,6 +47,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Well done! Now go ahead and add your profile!")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -63,6 +64,8 @@ def login():
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username").capitalize()))
+                    return redirect(
+                        url_for("profile", username=session["user"]))
             else:
                 flash("Oops! Check username and password again")
                 return redirect(url_for("login"))
@@ -73,6 +76,14 @@ def login():
 
     return render_template("login.html")
 
+
+@app.route("/profile<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    artist = mongo.db.artists.find_one(
+        {"created_by": session["user"]})
+    return render_template("profile.html", username=username, artist=artist)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
