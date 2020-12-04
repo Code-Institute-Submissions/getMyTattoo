@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container background-image">
 	<div class="row">
-		<form class="col col-md-6 offset-md-1 sign-panel" action="{{ url_for('register') }}" method="POST">
+		<form class="col col-md-6 offset-md-1 sign-panel" action="{{ url_for('login') }}" method="POST">
             <legend class="subtitle">Hello, artist!
-            <br>Please register here</legend>
+            <br>Log In to your profile</legend>
 			<div class="form-group">
 				<label for="username" class="d-none">Username</label>
 				<div class="input-group input-group-sm">
@@ -27,12 +27,13 @@
             <button class="btn btn-light btn-block" type="submit"> <i class="fa fa-sign-in form-icon text-muted"></i></button>
             <div class="row">
             <div class="col-sm-12">
-                <p class="link-form">Already have an account? 
-                    <a href="{{ url_for('login') }}">Click here</a>
+                <p class="link-form">Forgot to register? 
+                    <a href="{{ url_for('register') }}">Click here</a>
                 </p>
             </div>
         </div>
 		</form>
+        
 	</div>
 </div>
 {% endblock %}

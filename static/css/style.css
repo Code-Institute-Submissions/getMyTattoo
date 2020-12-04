@@ -35,7 +35,6 @@ main div h2.center{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 20px;
-    letter-spacing: 5px;
 }
 
 h4.flash{
@@ -180,6 +179,23 @@ button{
 
 button.btn:hover, button.btn:focus{
     background-color: black;
+}
+
+p.link-form{
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    font-size: 10px;
+}
+
+p.link-form a{
+    text-decoration: none;
+    color: white;
+}
+
+p.link-form a:hover{
+    font-weight: bold;
 }
 
 /* Media Queries */
