@@ -11,7 +11,7 @@
     {% endblock %}
 </head>
 <body>
-<!--Navbar with dropdown menu-->
+<!--Navbar with dropdown menu and search bar-->
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-black">
   <a class="navbar-brand logo" href="{{ url_for('get_artists') }}">Get My tattoo<br>
   <span>estd &middot; 2020</span>
@@ -41,17 +41,31 @@
     </form>
   </div>
 </nav>
-
+<!--Main section-->
 <main>
 <div class="container introduction">
 <h1 class="center">The Hypest Database for Tattoo Artists</h1>
 <h2 class="center">Find your next tattoo artist by searching our database by location, language, style</h2>
 </div>
+<!--Message flashed-->
+<section>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="row">
+            <div class="col-sm-12">
+                <h4 class="flash">{{ message }}</h4>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</section>
     {% block content %}
     {% endblock %}
 
 </main>
-
+<!--Footer-->
 <footer class="bg-black center">
 <small>Get My Tattoo is a project by KatiaDB&copy; 2020</small>
 </footer>

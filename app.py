@@ -30,6 +30,24 @@ def get_artists():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username")})
+
+        if existing_user:
+            flash("Username is already in use. Please try another one.")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username"),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Well done! Now go ahead and add your profile!")
+
     return render_template("register.html")
 
 
