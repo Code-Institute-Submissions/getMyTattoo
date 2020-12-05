@@ -47,7 +47,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Well done! Now go ahead and add your profile!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("add_profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -96,6 +96,24 @@ def logout():
     flash("See you next time!")
     session.pop("user")
     return redirect(url_for('login'))
+
+
+@app.route("/add_profile<username>", methods=["GET", "POST"])
+def add_profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})
+    return render_template("add-profile.html", username=username)
+
+
+@app.route("/edit-profile<username>", methods=["GET", "POST"])
+def edit_profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})
+    artist = mongo.db.artists.find_one(
+        {"created_by": session["user"]})
+    flash(" Here you can edit your profile.")
+    return render_template(
+        "edit-profile.html", username=username, artist=artist)
 
 
 if __name__ == "__main__":

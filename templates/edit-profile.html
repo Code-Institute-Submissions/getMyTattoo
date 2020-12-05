@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ username }}'s profile
+Edit {{ username }}'s profile
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
+<h4 class="flash">
+Make sure to add nice pictures to make your profile stand out!
+</h4>
     <div class="container profile-container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-4 center-mobile">
@@ -62,6 +64,6 @@
         </div>
     </div>
 	
-    <button href="{{ url_for('edit_profile', username=session['user']) }}" type="button" class="btn btn-light btn-lg btn-form">Edit your profile</button>
+    <button type="button" class="btn btn-light btn-lg">Save</button>
 </div>
 {% endblock %}
