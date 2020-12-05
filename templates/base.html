@@ -31,8 +31,10 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{{ url_for('register') }}">Register</a>
           <a class="dropdown-item" href="{{ url_for('login') }}">Log In</a>
-          <a class="dropdown-item" href="{{ url_for('profile', username=session['user']) }}">My Profile</a>
-          <a class="dropdown-item" href="#">Log Out</a>
+          {% if session.user %}
+            <a class="dropdown-item" href="{{ url_for('profile', username=session['user']) }}">My Profile</a>
+            <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
+          {% endif %}
         </div>
       </li>
     </ul>

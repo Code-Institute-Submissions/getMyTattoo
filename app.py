@@ -83,7 +83,20 @@ def profile(username):
         {"username": session["user"]})["username"]
     artist = mongo.db.artists.find_one(
         {"created_by": session["user"]})
-    return render_template("profile.html", username=username, artist=artist)
+
+    if session["user"]:
+        return render_template(
+            "profile.html", username=username, artist=artist)
+
+    return redirect(url_for('login'))
+
+
+@app.route("/logout")
+def logout():
+    flash("See you next time!")
+    session.pop("user")
+    return redirect(url_for('login'))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
