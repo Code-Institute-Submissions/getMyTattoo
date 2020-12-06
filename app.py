@@ -133,13 +133,42 @@ def add_profile(username):
     return render_template("add-profile.html", username=username)
 
 
-@app.route("/edit-profile<username>", methods=["GET", "POST"])
+@app.route("/edit_profile<username>", methods=["GET", "POST"])
 def edit_profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})
     artist = mongo.db.artists.find_one(
         {"created_by": session["user"]})
-    flash(" Here you can edit your profile.")
+
+    if session["user"]:
+
+        if request.method == "POST":
+
+            submit = {
+                "artist_name": request.form.get("artist_name"),
+                "address": request.form.get("address"),
+                "city": request.form.get("city"),
+                "phone": request.form.get("phone"),
+                "email": request.form.get("email"),
+                "facebook": request.form.get("facebook"),
+                "instagram": request.form.get("artist_name"),
+                "profile_url": request.form.get("profile_url"),
+                "languages": request.form.get("languages"),
+                "style": request.form.get("style"),
+                "bio": request.form.get("bio"),
+                "created_by": session["user"],
+                "photo_1": request.form.get("photo_1"),
+                "photo_2": request.form.get("photo_2"),
+                "photo_3": request.form.get("photo_3"),
+                "photo_4": request.form.get("photo_4"),
+                "photo_5": request.form.get("photo_5"),
+                "photo_6": request.form.get("photo_6")
+            }
+
+            mongo.db.artists.update({"created_by": session["user"]}, submit)
+            flash("Great, your profile is now updated!")
+            return redirect(url_for('profile', username=session['user']))
+
     return render_template(
         "edit-profile.html", username=username, artist=artist)
 

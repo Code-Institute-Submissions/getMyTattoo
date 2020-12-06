@@ -193,14 +193,14 @@ span.input-group-text{
   color: black
 }
 
-button{
+button, a.btn-form{
     margin-top: 30px;
     box-shadow: 0 8px 6px -6px black;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
 }
 
-button.btn:hover, button.btn:focus{
+button.btn:hover, button.btn:focus, a.btn-form:hover, a.btn-form:focus{
     background-color: black;
 }
 
@@ -275,11 +275,11 @@ img{
     box-shadow: 0 8px 6px -6px black;
 }
 
-button.btn-form{
+button.btn-form, a.btn-form{
     margin-bottom: 30px;
 }
 
-button.btn-form:hover{
+button.btn-form:hover, a.btn-form:hover{
     color: #e1e1e1;
     box-shadow: 0 0 20px #e1e1e1;
     text-shadow: 0 0 15px #e1e1e1;
@@ -299,16 +299,24 @@ form.add-profile input:hover, form.add-profile textarea:hover{
     padding-top: 30px;
     font-family: "Shadows Into Light", cursive;
     font-size: 20px;
+    letter-spacing: 1px;
 }
 
 form.add-profile input, textarea{
     border-radius: 25px;
     box-shadow: 0 8px 6px -6px black;
+    letter-spacing: 1px;
 }
 
 form.add-profile label{
     color: #333333;
 }
+
+p.text-form.text-upload{
+    padding-bottom: 30px;
+    text-align: center;
+}
+
 
 /* Media Queries */
 @media (max-width: 991px){
