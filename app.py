@@ -47,7 +47,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Well done! Now go ahead and add your profile!")
-        return redirect(url_for("add_profile", username=session["user"]))
+        return redirect(url_for("add_profile(username)"))
 
     return render_template("register.html")
 
@@ -100,8 +100,36 @@ def logout():
 
 @app.route("/add_profile<username>", methods=["GET", "POST"])
 def add_profile(username):
+
     username = mongo.db.users.find_one(
         {"username": session["user"]})
+
+    if request.method == "POST":
+        artist = {
+            "artist_name": request.form.get("artist_name"),
+            "address": request.form.get("address"),
+            "city": request.form.get("city"),
+            "phone": request.form.get("phone"),
+            "email": request.form.get("email"),
+            "facebook": request.form.get("facebook"),
+            "instagram": request.form.get("artist_name"),
+            "profile_url": request.form.get("profile_url"),
+            "languages": request.form.get("languages"),
+            "style": request.form.get("style"),
+            "bio": request.form.get("bio"),
+            "created_by": session["user"],
+            "photo_1": request.form.get("photo_1"),
+            "photo_2": request.form.get("photo_2"),
+            "photo_3": request.form.get("photo_3"),
+            "photo_4": request.form.get("photo_4"),
+            "photo_5": request.form.get("photo_5"),
+            "photo_6": request.form.get("photo_6")
+        }
+
+        mongo.db.artists.insert_one(artist)
+        flash("Great, your profile is now added!")
+        return redirect(url_for('profile', username=session['user']))
+
     return render_template("add-profile.html", username=username)
 
 

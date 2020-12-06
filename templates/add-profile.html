@@ -12,7 +12,7 @@ This is your business card, so show your best!
 </h4>
     <div class="container profile-container">
         
-<form class="add-profile" action="" method="POST">
+<form class="add-profile" action="{{ url_for('add_profile', username=session['user']) }}" method="POST">
     <div class="form-group">
       <label for="artist_name"><i class="fa fa-user form-icon-profile"></i> Your Name</label>
       <input type="text" class="form-control" id="artist_name" name="artist_name">
@@ -112,13 +112,14 @@ This is your business card, so show your best!
         <label for="photo_6"><i class="far fa-image"></i> Image 6 (url)</label>
         <input type="text" class="form-control" id="photo_6" name="photo_6" placeholder="Add link">
     </div>
+
 <div class="row">
 <div class="col-sm-12 center">
 <button type="submit" class="btn btn-light btn-lg btn-form">Save <i class="fas fa-cloud-upload-alt"></i></button>
 </div>
 </div>
-  
-</form>
+  </form>
+
 
     </div>
 	

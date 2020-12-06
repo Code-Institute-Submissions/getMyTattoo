@@ -279,8 +279,15 @@ button.btn-form{
     margin-bottom: 30px;
 }
 
-button.btn-form:hover, form.add-profile input:hover, form.add-profile textarea:hover{
+button.btn-form:hover{
     color: #e1e1e1;
+    box-shadow: 0 0 20px #e1e1e1;
+    text-shadow: 0 0 15px #e1e1e1;
+    border: 2px solid #e6e6e6;
+}
+
+form.add-profile input:hover, form.add-profile textarea:hover{
+    color: #333333;
     box-shadow: 0 0 20px #e1e1e1;
     text-shadow: 0 0 15px #e1e1e1;
     border: 2px solid #e6e6e6;
