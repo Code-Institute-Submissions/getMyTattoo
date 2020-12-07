@@ -31,7 +31,7 @@ Edit your profile
 
     <div class="form-group col-md-6">
       <label for="phone"><i class="fas fa-phone"></i> Phone</label>
-      <input type="phone" class="form-control" id="phone" name="phone" value="{{ artist.phone }}">
+      <input type="tel" class="form-control" id="phone" name="phone" value="{{ artist.phone }}">
     </div>
 
     <div class="form-group col-md-6">
@@ -45,19 +45,19 @@ Edit your profile
 
     <div class="form-group col-md-6">
       <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
-      <input type="text" class="form-control" id="facebook" name="facebook" value="{{ artist.facebook }}">
+      <input type="url" class="form-control" id="facebook" name="facebook" value="{{ artist.facebook }}">
     </div>
 
     <div class="form-group col-md-6">
       <label for="instagram"><i class="fab fa-instagram-square"></i> Instagram</label>
-      <input type="text" class="form-control" id="instagram" name="instagram" value="{{ artist.instagram }}">
+      <input type="url" class="form-control" id="instagram" name="instagram" value="{{ artist.instagram }}">
     </div>
 
   </div>
 
   <div class="form-group">
     <label for="profile_url"><i class="fas fa-user-circle"></i> Profile picture (url)</label>
-    <input type="text" class="form-control" id="profile_url" name="profile_url" value="{{ artist.profile_url }}">
+    <input type="url" class="form-control" id="profile_url" name="profile_url" value="{{ artist.profile_url }}">
   </div>
 
   <div class="form-row">
@@ -75,7 +75,7 @@ Edit your profile
 
     <div class="form-group">
         <label for="bio"><i class="fas fa-book"></i> Biography</label>
-        <textarea class="form-control" id="bio" name="bio" rows="10" value="{{ artist.bio }}"></textarea>
+        <textarea class="form-control" id="bio" name="bio" rows="10"> {{ artist.bio }} </textarea>
     </div>
     <br>
     <br>
@@ -84,32 +84,32 @@ Edit your profile
 
     <div class="form-group">
         <label for="photo_1"><i class="far fa-image"></i> Image 1 (url)</label>
-        <input type="text" class="form-control" id="photo_1" name="photo_1" value="{{ artist.photo_1 }}">
+        <input type="url" class="form-control" id="photo_1" name="photo_1" value="{{ artist.photo_1 }}">
     </div>
 
     <div class="form-group">
         <label for="photo_2"><i class="far fa-image"></i> Image 2 (url)</label>
-        <input type="text" class="form-control" id="photo_2" name="photo_2" value="{{ artist.photo_2 }}">
+        <input type="url" class="form-control" id="photo_2" name="photo_2" value="{{ artist.photo_2 }}">
     </div>
 
     <div class="form-group">
         <label for="photo_3"><i class="far fa-image"></i> Image 3 (url)</label>
-        <input type="text" class="form-control" id="photo_3" name="photo_3" value="{{ artist.photo_3 }}">
+        <input type="url" class="form-control" id="photo_3" name="photo_3" value="{{ artist.photo_3 }}">
     </div>
 
     <div class="form-group">
         <label for="photo_4"><i class="far fa-image"></i> Image 4 (url)</label>
-        <input type="text" class="form-control" id="photo_4" name="photo_4" value="{{ artist.photo_4 }}">
+        <input type="url" class="form-control" id="photo_4" name="photo_4" value="{{ artist.photo_4 }}">
     </div>
 
     <div class="form-group">
         <label for="photo_5"><i class="far fa-image"></i> Image 5 (url)</label>
-        <input type="text" class="form-control" id="photo_5" name="photo_5" value="{{ artist.photo_5 }}">
+        <input type="url" class="form-control" id="photo_5" name="photo_5" value="{{ artist.photo_5 }}">
     </div>
 
     <div class="form-group">
         <label for="photo_6"><i class="far fa-image"></i> Image 6 (url)</label>
-        <input type="text" class="form-control" id="photo_6" name="photo_6" value="{{ artist.photo_6 }}">
+        <input type="url" class="form-control" id="photo_6" name="photo_6" value="{{ artist.photo_6 }}">
     </div>
 
 <div class="row">
