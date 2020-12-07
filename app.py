@@ -47,7 +47,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Well done! Now go ahead and add your profile!")
-        return redirect(url_for("add_profile(username)"))
+        return redirect(url_for("add_profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -171,6 +171,19 @@ def edit_profile(username):
 
     return render_template(
         "edit-profile.html", username=username, artist=artist)
+
+
+@app.route("/confirm_delete<username>", methods=["GET", "POST"])
+def confirm_delete(username):
+
+    return render_template("confirm-delete.html")
+
+
+@app.route("/delete<username>")
+def delete_profile(username):
+    mongo.db.artists.remove({"created_by": session["user"]})
+    flash("Your profile has been deleted. We hope to have you back soon!")
+    return redirect(url_for('get_artists'))
 
 
 if __name__ == "__main__":
