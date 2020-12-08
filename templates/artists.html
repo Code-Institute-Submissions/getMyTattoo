@@ -5,11 +5,17 @@ Artists
 {% endblock %}
 
 {% block content %}
+
+
+<!--      Add or not?
 <div class="row">
 	<div class="col-sm-12">
 		<h3 class="subtitle center">Last added</h3>
 	</div>
 </div>
+-->
+
+{% if artists|length > 0 %}
 <!--Card with Artist Profile-->
 {% for artist in artists %}
 <div class="row card-artist">
@@ -61,4 +67,14 @@ Artists
 
 					</div>
 				</div>
+            {% else %}
+                <div class="row">
+	<div class="col-sm-12">
+		<h3 class="subtitle center">Sorry, no results were found.<br>
+        Try with other words.<br>
+        Hint: You can search by city, tattoo style, language</h3>
+	</div>
+</div>
+            {% endif %}
+            
 				{% endblock %}
