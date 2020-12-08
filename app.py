@@ -186,6 +186,13 @@ def delete_profile(username):
     return redirect(url_for('get_artists'))
 
 
+@app.route("/show_artist/<artist_id>")
+def show_artist(artist_id):
+    artist = mongo.db.artists.find_one(
+        {"_id": ObjectId(artist_id)})
+    return render_template("artist-page.html", artist=artist)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
