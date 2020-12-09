@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Shadows+Into+Light&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-size: 10px;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  width: 100vw;
+}
+
 /* Colours */
 body{
     background-color: black;
@@ -20,35 +34,35 @@ a.navbar-brand.logo, a.nav-link {
 }
 
 main div h1.center{
-    font-size: 40px;
+    font-size: 4rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 main div h2.center{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .subtitle{
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 h4.flash{
     font-family: "Shadows Into Light", cursive;
-    font-size: 30px;
+    font-size: 3rem;
     text-align: center;
     color: #E8E8E8;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .name-profile{
     font-family: "Shadows Into Light", cursive;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     text-decoration: underline;
     color: #333333;
@@ -56,18 +70,18 @@ h4.flash{
 
 .text-profile{
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #333333;
 }
 
 .text-form{
     font-family: "Shadows Into Light", cursive;
     color: black;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .confirm{
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 /* Placing */
@@ -77,39 +91,39 @@ h4.flash{
 }
 
 .introduction{
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 
 /* Navbar */
 .logo {
     text-transform: uppercase;
-    margin: 16px;
-    padding: 10px;
-    font-size: 30px;
+    margin: 1.6rem;
+    padding: 1rem;
+    font-size: 3rem;
 }
 
 .logo span{
-    font-size: 15px;
+    font-size: 1.5rem;
     float: left;
     margin-left: 25%;
 }
 
 .navbar-collapse{
-    margin-left: 70px;
+    margin-left: 7rem;
 }
 
 .nav-item{
-    margin: 20px;
+    margin: 2rem;
 }
 
 /* Show artists */
 .background-image{
-    max-height: 500px;
+    max-height: 50rem;
 }
 
 .subtitle{
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 .link{
@@ -123,7 +137,7 @@ h4.flash{
 }
 
 .img-panel{
-height: 400px;
+height: 40rem;
 object-fit: cover;
 }
 
@@ -132,30 +146,30 @@ object-fit: cover;
   background-image: url("/static/images/background.jpg");
   background-repeat: no-repeat;
   background-position: right top;
-  margin-right: 50px;
-  background-size: 500px 500px;
-  height: 500px;
+  margin-right: 5rem;
+  background-size: 50rem 50rem;
+  height: 50rem;
   padding: 0;
 }
 
 .sign-panel{
-    height: 300px;
+    height: 30rem;
     background-color: #858282;
-    margin-top: 30px;
+    margin-top: 3rem;
     border: 2px solid black;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 }
 
 legend{
     color: black;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 .form-input{
     border:none;
     border-bottom: 1px solid black;
-    padding: 5px 30px;
+    padding: 0.5rem 3rem;
     outline: none;
     background-color: gray;
     border-radius: 0px;
@@ -170,7 +184,7 @@ legend{
     /* Box shadow from https://css-tricks.com/almanac/properties/b/box-shadow/ */
     box-shadow: 0 8px 6px -6px black;
     background-color: #E8E8E8;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 }
 
 span.input-group-text{
@@ -179,7 +193,7 @@ span.input-group-text{
 }
 
 .form-icon{
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 
@@ -198,7 +212,7 @@ span.input-group-text{
 }
 
 button, a.btn-form{
-    margin-top: 30px;
+    margin-top: 3rem;
     box-shadow: 0 8px 6px -6px black;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
@@ -209,11 +223,11 @@ button.btn:hover, button.btn:focus, a.btn-form:hover, a.btn-form:focus{
 }
 
 p.link-form{
-    margin-top: 30px;
+    margin-top: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     color: gray;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 p.link-form a{
@@ -230,22 +244,22 @@ p.link-form a:hover{
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin: 5px;
+    margin: 0.5rem;
 }
 
 .icon-profile{
-    font-size: 20px;
-    margin: 5px;
+    font-size: 2rem;
+    margin: 0.5rem;
     color: #333333;
 }
 
 .icon-section{
     text-align: right;
-    padding-right: 30px;
+    padding-right: 3rem;
 }
 
 .information-section{
-    padding-left: 30px;
+    padding-left: 3rem;
 }
 
 address.text-profile{
@@ -253,23 +267,22 @@ address.text-profile{
 }
 
 .address-row{
-    margin-top: 60px;
+    margin-top: 6rem;
 }
 
 div.container.profile-container{
     background-color: #858282;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 }
 
 .profile-pic{
-    margin-left: 30px;
     margin-top: 30px;
-    max-width: 300px;
+    max-width: 30rem;
 }
 
 .bio{
-    margin-top: 60px;
-    padding-right: 30px;
+    margin-top: 6rem;
+    padding-right: 3rem;
 }
 
 .icon-profile.link:hover{
@@ -281,7 +294,7 @@ img{
 }
 
 button.btn-form, a.btn-form{
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 button.btn-form:hover, a.btn-form:hover{
@@ -301,9 +314,9 @@ form.add-profile input:hover, form.add-profile textarea:hover{
 /* Add Profile */
 .add-profile{
     color: black;
-    padding-top: 30px;
+    padding-top: 3rem;
     font-family: "Shadows Into Light", cursive;
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 1px;
 }
 
@@ -318,12 +331,13 @@ form.add-profile label{
 }
 
 p.text-form.text-upload{
-    padding-bottom: 30px;
+    padding-bottom: 3rem;
     text-align: center;
 }
 
 
 /* Media Queries */
+
 @media (max-width: 991px){
     .background-image{
         margin-right: 0;
@@ -337,13 +351,10 @@ p.text-form.text-upload{
     .background-image{
         background-image: none;
         margin: auto;
-        padding: 5px;
+        padding: 0.5rem;
         width: 90%;
     }
     form.col.col-md-6.offset-md-1.sign-panel{
     margin: 0 auto;
-    }
-    .center-mobile{
-        text-align: center;
     }
 }
