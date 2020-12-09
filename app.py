@@ -24,7 +24,7 @@ bootstrap = Bootstrap(app)
 @app.route("/")
 @app.route("/get_artists")
 def get_artists():
-    artists = mongo.db.artists.find().sort("artist_name", 1)
+    artists = list(mongo.db.artists.find().sort("artist_name", 1))
     return render_template("artists.html", artists=artists)
 
 
@@ -33,7 +33,7 @@ def search():
     query = request.form.get("query")
     artists = list(mongo.db.artists.find({"$text": {"$search": query}}))
 
-    return render_template("artists.html", artists=artists)
+    return render_template("search.html", artists=artists)
 
 
 @app.route("/register", methods=["GET", "POST"])

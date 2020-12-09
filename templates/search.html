@@ -1,18 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-Artists
+Artists search
 {% endblock %}
 
 {% block content %}
 
-<div class="row">
-	<div class="col-sm-12">
-		<h3 class="subtitle center">Last added</h3>
-	</div>
-</div>
 
-
+{% if artists|length > 0 %}
 <!--Card with Artist Profile-->
 {% for artist in artists %}
 <div class="row card-artist">
@@ -65,5 +60,22 @@ Artists
 
 					</div>
 				</div>
+                {% else %}
+                <div class="row">
+	<div class="col-sm-12">
+		<h3 class="subtitle center">No results were found.<br>
+        Try with other words.<br>
+        Hint: You can search by city, state, name, language, style
+        </h3>
+	</div>
+</div>
+{% endif %}
+
+    <div class="row">
+    <div class="col-sm-12 center">
+     <a href="{{ url_for('get_artists') }}" type="submit" class="btn btn-light btn-lg btn-form">Try with another search <i class="fas fa-search"></i></a>
+       <a href="{{ url_for('get_artists') }}" type="submit" class="btn btn-light btn-lg btn-form">Take me back <i class="fas fa-house-user"></i></a>
+    </div>
+    </div>
             
 				{% endblock %}
