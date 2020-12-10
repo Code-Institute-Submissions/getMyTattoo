@@ -6,6 +6,70 @@ Artists
 
 {% block content %}
 
+<div class="welcome center">
+<div class="welcome-image">
+<img src="{{ url_for('static', filename='images/tattoo-making.jpg') }}" alt="">
+
+<div class="overlay-text">
+<h2 class="welcome-title">Welcome to Get My Tattoo!</h2>
+<p class="welcome-text">Finding the right tattoo artist is not always easy. That's why Get My Tattoo is here for you!<br>
+The only database that helps you in your research.<br>
+You can easily search our database by location, tattoo style, tattoo artist, and also by the language the tattoo artist speaks!
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3 class="subtitle center">Need some ideas? Explore some different styles!</h3>
+	</div>
+</div>
+
+<div class="card-deck ideas">
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/manga.jpg') }}" class="card-img-top" alt="Manga style tattoo">
+    <div class="card-body">
+      <h5 class="card-title">Manga/Anime</h5>
+      <a href="{{ url_for('show_manga') }}" class="btn btn-dark btn-form">See All</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/nordic.jpg') }}" class="card-img-top" alt="Nordic style tattoo">
+    <div class="card-body">
+      <h5 class="card-title">Nordic Style</h5>
+      <a href="{{ url_for('show_nordic') }}" class="btn btn-dark btn-form">See All</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/japanese.jpg') }}" class="card-img-top" alt="Japanese style tattoo">
+    <div class="card-body">
+      <h5 class="card-title">Japanese</h5>
+      <a href="{{ url_for('show_japanese') }}" class="btn btn-dark btn-form">See All</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/realism.jpg') }}" class="card-img-top" alt="Realistic style tattoo">
+    <div class="card-body">
+      <h5 class="card-title">Realism</h5>
+      <a href="{{ url_for('show_realism') }}" class="btn btn-dark btn-form">See All</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+	<div class="col-sm-12">
+		<h3 class="subtitle center">Or simply search our database</h3>
+	</div>
+</div>
+
+
+
+
 <div class="row">
 	<div class="col-sm-12">
 		<h3 class="subtitle center">Last added</h3>
@@ -60,10 +124,11 @@ Artists
 						</div>
 						<hr>
 						<hr>
-						{% endfor %}
+                        <hr>
+					
 
 
 					</div>
 				</div>
-            
+                {% endfor %}
 				{% endblock %}

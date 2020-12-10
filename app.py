@@ -201,6 +201,34 @@ def show_artist(artist_id):
     return render_template("artist-page.html", artist=artist)
 
 
+@app.route("/show_manga")
+def show_manga():
+    artists = list(mongo.db.artists.find(
+        {"$text": {"$search": "manga anime"}}))
+    return render_template("show-styles.html", artists=artists)
+
+
+@app.route("/show_nordic")
+def show_nordic():
+    artists = list(mongo.db.artists.find(
+        {"$text": {"$search": "nordic viking"}}))
+    return render_template("show-styles.html", artists=artists)
+
+
+@app.route("/show_japanese")
+def show_japanese():
+    artists = list(mongo.db.artists.find(
+        {"$text": {"$search": "japanese"}}))
+    return render_template("show-styles.html", artists=artists)
+
+
+@app.route("/show_realism")
+def show_realism():
+    artists = list(mongo.db.artists.find(
+        {"$text": {"$search": "realism realistic"}}))
+    return render_template("show-styles.html", artists=artists)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

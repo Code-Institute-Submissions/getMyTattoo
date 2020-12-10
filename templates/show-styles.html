@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-Artists search
+Show Tattoo Styles
 {% endblock %}
 
 {% block content %}
@@ -55,12 +55,14 @@ Artists search
 						</div>
 						<hr>
 						<hr>
-						{% endfor %}
+                        <hr>
+					
 
 
 					</div>
 				</div>
-                {% else %}
+                {% endfor %}
+             {% else %}
                 <div class="row">
 	<div class="col-sm-12">
 		<h3 class="subtitle center">No results were found.<br>
@@ -70,11 +72,9 @@ Artists search
 	</div>
 </div>
 {% endif %}
-
-    <div class="row">
+                <div class="row">
     <div class="col-sm-12 center">
        <a href="{{ url_for('get_artists') }}" type="submit" class="btn btn-light btn-lg btn-form">Take me back <i class="fas fa-house-user"></i></a>
     </div>
     </div>
-            
 				{% endblock %}
