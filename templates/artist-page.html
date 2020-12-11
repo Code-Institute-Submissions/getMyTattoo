@@ -13,19 +13,19 @@
                 <img src="{{ artist.profile_url }}" class="img-panel profile-pic" alt="{{ artist.artist_name }}'s profile picture'">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 information-section">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 name-profile center-mobile">
+                <div class="row information-row">
+                    <div class="col-sm-12 col-lg-6 name-profile center-tablet">
                         {{ artist.artist_name }}
                     </div>
-                    <div class="col-sm-12 col-md-6 icon-section center-mobile">
-                        <a href="tel:{{ artist.phone }}" class="fas fa-phone icon-profile link"></a>
-                        <a href="mailto:{{ artist.email }}" class="fas fa-at icon-profile link"></a>
-                        <a href="{{ artist.facebook }}" class="fab fa-facebook icon-profile link" target="_blank" rel="noopener"></a>
-                        <a href="{{ artist.instagram }}" class="fab fa-instagram icon-profile link" target="_blank" rel="noopener"></a>
+                    <div class="col-sm-12 col-lg-6 icon-section center-tablet">
+                        <a href="tel:{{ artist.phone }}" class= "icon-profile link"><i class="fas fa-phone"></i></a>
+                        <a href="mailto:{{ artist.email }}" class="icon-profile link"><i class="fas fa-at"></i></a>
+                        <a href="{{ artist.facebook }}" class="icon-profile link" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="{{ artist.instagram }}" class="icon-profile link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="row address-row">
-                    <div class="col-sm-12 center-mobile">
+                    <div class="col-sm-12 center-tablet">
                         <p class="text-profile">You can find me at:</p>
                         <address class="text-profile font-italic">{{ artist.address }}</address>
                         <p class="text-profile font-italic">{{ artist.city }}</p>

@@ -78,6 +78,14 @@ i{
     font-size: 2rem;
 }
 
+input.form-control{
+    font-size: 1.5rem;
+}
+
+button.btn.btn-outline-light{
+    font-size: 1.5rem;
+}
+
 main div h1.center{
     font-size: 4rem;
     font-family: "Montserrat", sans-serif;
@@ -208,6 +216,29 @@ h4.flash{
 .nav-item{
     margin: 2rem;
 }
+
+button.btn.btn-outline-light:hover{
+    color: #e1e1e1;
+    box-shadow: 0 0 20px #e1e1e1;
+    text-shadow: 0 0 15px #e1e1e1;
+    border: 2px solid #e6e6e6;
+}
+
+button.navbar-toggler{
+    height: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2rem;
+    border-color: #e1e1e1;
+}
+
+button.navbar-toggler:hover{
+    color: #e1e1e1;
+    box-shadow: 0 0 20px #e1e1e1;
+    text-shadow: 0 0 15px #e1e1e1;
+    border: 2px solid #e6e6e6;
+}
+
 
 /* Show artists */
 .background-image{
@@ -345,13 +376,18 @@ p.link-form a:hover{
     color: #333333;
 }
 
+.information-row{
+    margin-top: 3rem;
+}
+
+.row.information-row .icon-section{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .icon-section{
     text-align: right;
     padding-right: 3rem;
-}
-
-.information-section{
-    padding-left: 3rem;
 }
 
 address.text-profile{
@@ -436,6 +472,13 @@ p.text-form.text-upload{
     }
     form.col.col-md-6.offset-md-1.sign-panel{
         margin-left: 0;
+    }
+    .center-tablet{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .address-row{
+        margin-top: 0;
     }
 }
 
