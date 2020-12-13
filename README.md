@@ -28,6 +28,7 @@ The search page displays  the results of the user's research.
 For each result there is a row with a profile picture of the tattoo artist (on the left), an information section (on the center) displaying the name of the artist and his/her biography, and a carousel (on the right) with three pictures of the artists’s tattoos.
 In this way the user can understand in a glance if the tattoo artist might be of interest, or not. 
 In case the user wants to know more about one tattoo artist, there is a link at the bottom of the central information section that leads directly to the artist page.
+A target attribute has been added to the link that leads to the artist's page: in this way the user doesn't lose the search results if clicks on a link.
 
 
 ### Show Styles
