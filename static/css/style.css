@@ -78,6 +78,11 @@ i{
     font-size: 2rem;
 }
 
+label{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+}
+
 input.form-control{
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;

@@ -32,6 +32,10 @@ In case the user wants to know more about one tattoo artist, there is a link at 
 
 ### Show Styles
 
+That page displays a list of artists which share the same tattoo style.
+
+The layout is the same as the artists section on the home page.
+
 
 ### Show Artist Page
 
@@ -62,7 +66,7 @@ A form with all the fields needed is shown. Here the tattoo artist can add:
 * name
 * address
 * city
-* state
+* country
 * profile picture (url)
 * phone number
 * email

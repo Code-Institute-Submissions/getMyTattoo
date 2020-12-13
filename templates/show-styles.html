@@ -16,29 +16,29 @@ Show Tattoo Styles
             <div class="col col-sm-12 col-lg-8">
                 <div class="row panel">
                     <div class="col-sm-12 col-md-6">
-                        <div class="card" style="width: 100%;">
+                        <div class="card scroll" style="width: 100%;">
                             <img class="card-img-top img-panel" src="{{ artist.profile_url }}"
                                 alt="Profile picture for {{ artist.artist_name }}">
                         </div>
                     </div>
                     <div class="d-none d-md-block col-md-6">
-                        <h5 class="card-title">{{ artist.artist_name }}</h5>
-                        <p class="card-text">{{ artist.bio }}</p>
+                        <h5 class="card-title scroll">{{ artist.artist_name }}</h5>
+                        <p class="card-text scroll">{{ artist.bio }}</p>
                         <a href="{{ url_for('show_artist', artist_id=artist._id) }}" class="link">Go to
                             {{ artist.artist_name }}'s page</a>
                     </div>
                 </div>
                 <div class="row d-sm-block d-md-none">
                     <div class="col-sm-12 d-sm-block d-md-none">
-                        <h5 class="card-title">{{ artist.artist_name }}</h5>
-                        <p class="card-text">{{ artist.bio }}</p>
+                        <h5 class="card-title scroll">{{ artist.artist_name }}</h5>
+                        <p class="card-text scroll">{{ artist.bio }}</p>
                         <a href="{{ url_for('show_artist', artist_id=artist._id) }}" class="link">Go to
                             {{ artist.artist_name }}'s page</a>
                     </div>
                 </div>
             </div>
 
-<div class="col col-lg-4 d-none d-lg-block">
+<div class="col col-lg-4 d-none d-lg-block scroll">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">

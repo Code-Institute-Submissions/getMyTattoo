@@ -9,15 +9,15 @@
 <h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
     <div class="container profile-container">
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 center">
+            <div class="col-sm-12 col-md-6 col-lg-4 center scroll">
                 <img src="{{ artist.profile_url }}" class="img-panel profile-pic" alt="{{ artist.artist_name }}'s profile picture'">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 information-section">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 name-profile center-mobile">
+                    <div class="col-sm-12 col-md-6 name-profile center-mobile scroll">
                         {{ artist.artist_name }}
                     </div>
-                    <div class="col-sm-12 col-md-6 icon-section center-mobile">
+                    <div class="col-sm-12 col-md-6 icon-section center-mobile scroll">
                         <a href="tel:{{ artist.phone }}" class="fas fa-phone icon-profile link"></a>
                         <a href="mailto:{{ artist.email }}" class="fas fa-at icon-profile link"></a>
                         <a href="{{ artist.facebook }}" class="fab fa-facebook icon-profile link" target="_blank" rel="noopener"></a>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="row address-row">
-                    <div class="col-sm-12 center-mobile">
+                    <div class="col-sm-12 center-mobile scroll">
                         <p class="text-profile">You can find me at:</p>
                         <address class="text-profile font-italic">{{ artist.address }}</address>
                         <p class="text-profile font-italic">{{ artist.city }}</p>
@@ -33,15 +33,15 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <p class="text-profile bio"><strong>Bio:</strong> <br>{{ artist.bio }}</p>
-                        <p class="text-profile"><strong>Languages spoken:</strong> {{ artist.languages }}</p>
-                        <p class="text-profile"><strong>Tattoo styles:</strong> {{ artist.style }}</p>
+                        <p class="text-profile bio scroll"><strong>Bio:</strong> <br>{{ artist.bio }}</p>
+                        <p class="text-profile scroll"><strong>Languages spoken:</strong> {{ artist.languages }}</p>
+                        <p class="text-profile scroll"><strong>Tattoo styles:</strong> {{ artist.style }}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-2">
+            <div class="col-sm-12 col-md-6 col-lg-2 scroll">
                 <img src="{{ artist.photo_1 }}" class="image-profile" alt="">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-2">
