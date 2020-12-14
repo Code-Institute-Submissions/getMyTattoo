@@ -24,8 +24,14 @@ bootstrap = Bootstrap(app)
 @app.route("/")
 @app.route("/get_artists")
 def get_artists():
-    artists = list(mongo.db.artists.find().sort("artist_name", 1))
+    artists = mongo.db.artists.find().sort([("_id", -1)]).limit(5)
     return render_template("artists.html", artists=artists)
+
+
+@app.route("/all_artists")
+def all_artists():
+    artists = list(mongo.db.artists.find().sort("artist_name", 1))
+    return render_template("all-artists.html", artists=artists)
 
 
 @app.route("/search", methods=["GET", "POST"])

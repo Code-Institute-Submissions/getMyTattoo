@@ -135,28 +135,67 @@ Also, to keep the informations on the website consistent for all the tattoo arti
 
 * **Structure Plane**
 
-The sticky navbar allows users to navigate easily on the website without going back and forth wasting time.
+The sticky navbar allows users to navigate easily on the website without going back and forth wasting time, considering also that the website has many pages and without a sticky navbar the user can easily get lost.
+
 The search bar, fundamental feature, is placed on the navbar and is also repeated on the home page.
-All the buttons have a glowing effect on hover, to add focus and attract the user.
-A smooth scrolling effect add some extra class and modernity.
+
+All the buttons have a glowing effect on hover, to add focus and attract the user. At the bottom of almost every page there is a button that allows the user to do something: for example, to edit the profile, delete it, or go back to the home page.
+
+A smooth scrolling effect add some extra class and modernity, obtained with ScrollReveal.js.
+
+Validation on forms is adapted and customized from Bootstrap JavaScript validation. A feedback tells the user if the fields are correctly filled or not.
+This validation also prevents the form from being submitted with invalid fields.
+
+The website is divided into two different structures: one is for all the users, one is only for registered users (in this case, only for tattoo artists).
+
+The structure visibile to all users includes the home page and the search functionality, which allows anyone to access tattoo artists' profiles.
+
+The other structure level is dedicated only to tattoo artists. They can register with a username and add their profile, which will be visible to anyone. 
+Tattoo artists can also edit their own profile or delete it directly without contacting an admin of the website.
 
 
 * **Skeleton Plane**
+
+The pattern design is consistent throughout all the pages.
+
+You can view my prototypes clicking on the following links:
+
+* [Mobile Prototype](static/documents/wireframes/mobile.pdf)
+
+* [Desktop Prototyep](static/documents/wireframes/desktop.pdf)
+
+Prototyping has been made with Adobe XD.
 
 
 
 * **Surface Plane**
 
+The absence of colours is dominant in this website.
+
+I decided to make black and grey the main characters of the design because I wanted to give the feeling of ink and tattooes on the screen.
 
 
 ### User stories
 
 #### First Time Visitor Goals
 
+* As a user interested in tattoos, I want to find easily information about tattoo artists in my area.
+* As a user interested in tattoos, I want to find easily information about tattoo artists specialized in a particular tattoo style.
+* As a user interested in tattoos, I want to find easily information about tattoo artists that speak my language.
+* As a user interested in tattoos, I want to browse the database just to have a look at tattoos pictures.
+
+* As a tattoo artist, I want to add my profile to get new customers.
+* As a tattoo artist, I want to have a look at my competitors' works.
+* As a tattoo artist, I want to contact the owner of the website.
 
 #### Returning Visitor Goals
 
-#### Frequent User Goals
+* As a user interested in tattoos, I want to contact a specific tattoo artist.
+* As a user interested in tattoos, I want to have a look at last added tattoo artists.
+
+* As a tattoo artist, I want to edit my profile.
+* As a tattoo artist, I want to delete my profile.
+
 
 
 ### Design
@@ -204,6 +243,7 @@ A smooth scrolling effect add some extra class and modernity.
 * GitPod
 * Heroku
 * Chrome DevTools
+* Adobe XD
 * Favicon.ico
 
 ---
