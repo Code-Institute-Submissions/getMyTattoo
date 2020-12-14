@@ -6,39 +6,55 @@ Login to Get My Tattoo
 
 {% block content %}
 <div class="container background-image">
-	<div class="row">
-		<form class="col col-md-6 offset-md-1 sign-panel" action="{{ url_for('login') }}" method="POST">
+    <div class="row">
+        <form class="col col-md-6 offset-md-1 sign-panel needs-validation" action="{{ url_for('login') }}" method="POST"
+            novalidate>
             <legend class="subtitle">Hello, artist!
-            <br>Log In to your profile</legend>
-			<div class="form-group scroll">
-				<label for="username" class="d-none">Username</label>
-				<div class="input-group input-group-sm">
-					<div class="input-group-prepend">
-						<span class="input-group-text"><i class="fas fa-user form-icon"></i></span>
-					</div>
-					<input type="text" class="form-control form-input" id="username" name="username" placeholder="Your username" pattern="^[a-zA-Z0-9]{5,20}$" required>
-			    </div>
-				</div>
-			
+                <br>Log In to your profile</legend>
             <div class="form-group scroll">
-				<label for="password" class="d-none">Password</label>
+                <label for="username" class="d-none">Username</label>
                 <div class="input-group input-group-sm">
-					<div class="input-group-prepend">
-						<span class="input-group-text"><i class="fas fa-lock form-icon"></i></span>
-					</div>
-				<input type="password" class="form-control form-input" id="password" name="password" placeholder="Your password" minlength="5" maxlength="20" required>
-			</div>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user form-icon"></i></span>
+                    </div>
+                    <input type="text" class="form-control form-input" id="username" name="username"
+                        placeholder="Your username" pattern="^[a-zA-Z0-9]{5,20}$" required>
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Choose a valid username. Only letters and numbers are accepted.
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-light btn-block" type="submit"> <i class="fas fa-sign-in-alt form-icon text-muted"></i></button>
+
+            <div class="form-group scroll">
+                <label for="password" class="d-none">Password</label>
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock form-icon"></i></span>
+                    </div>
+                    <input type="password" class="form-control form-input" id="password" name="password"
+                        placeholder="Your password" minlength="5" maxlength="20" required>
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Password should be between 5-20 chars.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-light btn-block" type="submit"> <i
+                    class="fas fa-sign-in-alt form-icon text-muted"></i></button>
             <div class="row">
-            <div class="col-sm-12">
-                <p class="link-form">Forgot to register? 
-                    <a href="{{ url_for('register') }}">Click here</a>
-                </p>
+                <div class="col-sm-12">
+                    <p class="link-form">Forgot to register?
+                        <a href="{{ url_for('register') }}">Click here</a>
+                    </p>
+                </div>
             </div>
-        </div>
-		</form>
-        
-	</div>
+        </form>
+
+    </div>
 </div>
 {% endblock %}

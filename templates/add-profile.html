@@ -6,122 +6,228 @@ Add {{ username }}'s profile
 
 {% block content %}
 <div class="container">
-<h4 class="flash">
-Make sure to add nice pictures to make your profile stand out!<br>
-This is your business card, so show your best!
-</h4>
+    <h4 class="flash">
+        Make sure to add nice pictures to make your profile stand out!<br>
+        This is your business card, so show your best!
+    </h4>
     <div class="container profile-container">
-        
-<form class="add-profile" action="{{ url_for('add_profile', username=session['user']) }}" method="POST">
-    <div class="form-group scroll">
-      <label for="artist_name"><i class="fa fa-user form-icon-profile"></i> Your Name</label>
-      <input type="text" class="form-control" id="artist_name" name="artist_name" minlength="3" maxlength="30" required>
+
+        <form class="add-profile needs-validation" action="{{ url_for('add_profile', username=session['user']) }}"
+            method="POST" novalidate>
+            <div class="form-group scroll">
+                <label for="artist_name"><i class="fa fa-user form-icon-profile"></i> Your Name</label>
+                <input type="text" class="form-control" id="artist_name" name="artist_name" minlength="3" maxlength="30"
+                    pattern="^[a-zA-Z]{3,30}$" required>
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Your name should have only letters and a length between 3 and 30 chars.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="address"><i class="fas fa-map-marked-alt"></i> Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid address format.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="city"><i class="fas fa-city"></i> City</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid name.
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid phone number.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="email"><i class="fas fa-at"></i> Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid email format.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
+                    <input type="url" class="form-control" id="facebook" name="facebook" placeholder="Add link">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid url.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="instagram"><i class="fab fa-instagram-square"></i> Instagram</label>
+                    <input type="url" class="form-control" id="instagram" name="instagram" placeholder="Add link">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid url.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group scroll">
+                <label for="profile_url"><i class="fas fa-user-circle"></i> Profile picture (url)</label>
+                <input type="url" class="form-control" id="profile_url" name="profile_url" placeholder="Add link"
+                    required>
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="languages"><i class="fas fa-globe-europe"></i> Languages spoken</label>
+                    <input type="text" class="form-control" id="languages" name="languages">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a text field.
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="style"><i class="fas fa-star"></i> Tattoo style(s)</label>
+                    <input type="text" class="form-control" id="style" name="style">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a text field.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="bio"><i class="fas fa-book"></i> Biography</label>
+                <textarea class="form-control" id="bio" name="bio" rows="10"></textarea>
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid text.
+                </div>
+            </div>
+            <br>
+            <br>
+            <p class="text-form text-upload">Now add some beautiful images to show your best art works.
+                Upload them on a hoisting server and provide the links.</p>
+
+            <div class="form-group scroll">
+                <label for="photo_1"><i class="far fa-image"></i> Image 1 (url)</label>
+                <input type="url" class="form-control" id="photo_1" name="photo_1" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="photo_2"><i class="far fa-image"></i> Image 2 (url)</label>
+                <input type="url" class="form-control" id="photo_2" name="photo_2" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="photo_3"><i class="far fa-image"></i> Image 3 (url)</label>
+                <input type="url" class="form-control" id="photo_3" name="photo_3" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="photo_4"><i class="far fa-image"></i> Image 4 (url)</label>
+                <input type="url" class="form-control" id="photo_4" name="photo_4" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="photo_5"><i class="far fa-image"></i> Image 5 (url)</label>
+                <input type="url" class="form-control" id="photo_5" name="photo_5" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="form-group scroll">
+                <label for="photo_6"><i class="far fa-image"></i> Image 6 (url)</label>
+                <input type="url" class="form-control" id="photo_6" name="photo_6" placeholder="Add link">
+                <div class="valid-feedback feedback">
+                    Great!
+                </div>
+                <div class="invalid-feedback feedback">
+                    Please enter a valid url.
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 center scroll">
+                    <button type="submit" class="btn btn-light btn-lg btn-form">Save <i
+                            class="fas fa-cloud-upload-alt"></i></button>
+                </div>
+            </div>
+        </form>
+
+
     </div>
 
-    <div class="form-group scroll">
-     <label for="address"><i class="fas fa-map-marked-alt"></i> Address</label>
-     <input type="text" class="form-control" id="address" name="address" required>
-    </div>
-
-  <div class="form-group scroll">
-    <label for="city"><i class="fas fa-city"></i> City</label>
-    <input type="text" class="form-control" id="city" name="city" required>
-  </div>
-
-  <div class="form-row">
-
-    <div class="form-group col-md-6 scroll">
-      <label for="phone"><i class="fas fa-phone"></i> Phone</label>
-      <input type="tel" class="form-control" id="phone" name="phone" required>
-    </div>
-
-    <div class="form-group col-md-6 scroll">
-      <label for="email"><i class="fas fa-at"></i> Email</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-
-  </div>
-
-  <div class="form-row">
-
-    <div class="form-group col-md-6 scroll">
-      <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
-      <input type="url" class="form-control" id="facebook" name="facebook" placeholder="Add link">
-    </div>
-
-    <div class="form-group col-md-6 scroll">
-      <label for="instagram"><i class="fab fa-instagram-square"></i> Instagram</label>
-      <input type="url" class="form-control" id="instagram" name="instagram" placeholder="Add link">
-    </div>
-
-  </div>
-
-  <div class="form-group scroll">
-    <label for="profile_url"><i class="fas fa-user-circle"></i> Profile picture (url)</label>
-    <input type="url" class="form-control" id="profile_url" name="profile_url" placeholder="Add link" required>
-  </div>
-
-  <div class="form-row">
-
-    <div class="form-group col-md-6 scroll">
-      <label for="languages"><i class="fas fa-globe-europe"></i> Languages spoken</label>
-      <input type="text" class="form-control" id="languages" name="languages">
-    </div>
-
-    <div class="form-group col-md-6 scroll">
-      <label for="style"><i class="fas fa-star"></i> Tattoo style(s)</label>
-      <input type="text" class="form-control" id="style" name="style">
-    </div>
-     </div>
-
-    <div class="form-group scroll">
-        <label for="bio"><i class="fas fa-book"></i> Biography</label>
-        <textarea class="form-control" id="bio" name="bio" rows="10"></textarea>
-    </div>
-    <br>
-    <br>
-    <p class="text-form text-upload">Now add some beautiful images to show your best art works.
-    Upload them on a hoisting server and provide the links.</p>
-
-    <div class="form-group scroll">
-        <label for="photo_1"><i class="far fa-image"></i> Image 1 (url)</label>
-        <input type="url" class="form-control" id="photo_1" name="photo_1" placeholder="Add link">
-    </div>
-
-    <div class="form-group scroll">
-        <label for="photo_2"><i class="far fa-image"></i> Image 2 (url)</label>
-        <input type="url" class="form-control" id="photo_2" name="photo_2" placeholder="Add link">
-    </div>
-
-    <div class="form-group scroll">
-        <label for="photo_3"><i class="far fa-image"></i> Image 3 (url)</label>
-        <input type="url" class="form-control" id="photo_3" name="photo_3" placeholder="Add link">
-    </div>
-
-    <div class="form-group scroll">
-        <label for="photo_4"><i class="far fa-image"></i> Image 4 (url)</label>
-        <input type="url" class="form-control" id="photo_4" name="photo_4" placeholder="Add link">
-    </div>
-
-    <div class="form-group scroll">
-        <label for="photo_5"><i class="far fa-image"></i> Image 5 (url)</label>
-        <input type="url" class="form-control" id="photo_5" name="photo_5" placeholder="Add link">
-    </div>
-
-    <div class="form-group scroll">
-        <label for="photo_6"><i class="far fa-image"></i> Image 6 (url)</label>
-        <input type="url" class="form-control" id="photo_6" name="photo_6" placeholder="Add link">
-    </div>
-
-<div class="row">
-<div class="col-sm-12 center scroll">
-<button type="submit" class="btn btn-light btn-lg btn-form">Save <i class="fas fa-cloud-upload-alt"></i></button>
-</div>
-</div>
-  </form>
-
-
-    </div>
-	
 </div>
 {% endblock %}
