@@ -21,6 +21,7 @@ mongo = PyMongo(app)
 bootstrap = Bootstrap(app)
 
 
+# Home Page
 @app.route("/")
 @app.route("/get_artists")
 def get_artists():
@@ -28,12 +29,14 @@ def get_artists():
     return render_template("artists.html", artists=artists)
 
 
+# Show All the Artists in the database, in alphabetical order
 @app.route("/all_artists")
 def all_artists():
     artists = list(mongo.db.artists.find().sort("artist_name", 1))
     return render_template("all-artists.html", artists=artists)
 
 
+# Search Functionality
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -42,6 +45,7 @@ def search():
     return render_template("search.html", artists=artists)
 
 
+# Register Functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -66,6 +70,7 @@ def register():
     return render_template("register.html")
 
 
+# Login Functionality
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -91,6 +96,7 @@ def login():
     return render_template("login.html")
 
 
+# Display personal profile to user
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
@@ -105,6 +111,7 @@ def profile(username):
     return redirect(url_for('login'))
 
 
+# Logout Functionality
 @app.route("/logout")
 def logout():
     flash("See you next time!")
@@ -112,6 +119,7 @@ def logout():
     return redirect(url_for('login'))
 
 
+# Add Profile after registering new user
 @app.route("/add_profile/<username>", methods=["GET", "POST"])
 def add_profile(username):
 
@@ -148,6 +156,7 @@ def add_profile(username):
     return render_template("add-profile.html", username=username)
 
 
+# Edit user's profile
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     username = mongo.db.users.find_one(
@@ -189,12 +198,14 @@ def edit_profile(username):
         "edit-profile.html", username=username, artist=artist)
 
 
+# Ask for confirmation when user clicks on "delete profile"
 @app.route("/confirm_delete<username>", methods=["GET", "POST"])
 def confirm_delete(username):
 
     return render_template("confirm-delete.html")
 
 
+# Delete user's profile
 @app.route("/delete<username>")
 def delete_profile(username):
     mongo.db.artists.remove({"created_by": session["user"]})
@@ -202,6 +213,7 @@ def delete_profile(username):
     return redirect(url_for('get_artists'))
 
 
+# Show Artist Page: page acessible to all users
 @app.route("/show_artist/<artist_id>")
 def show_artist(artist_id):
     artist = mongo.db.artists.find_one(
@@ -209,6 +221,7 @@ def show_artist(artist_id):
     return render_template("artist-page.html", artist=artist)
 
 
+# Show Artists specialized in Manga style: page acessible to all users
 @app.route("/show_manga")
 def show_manga():
     artists = list(mongo.db.artists.find(
@@ -216,6 +229,7 @@ def show_manga():
     return render_template("show-styles.html", artists=artists)
 
 
+# Show Artists specialized in Nordic style: page acessible to all users
 @app.route("/show_nordic")
 def show_nordic():
     artists = list(mongo.db.artists.find(
@@ -223,6 +237,7 @@ def show_nordic():
     return render_template("show-styles.html", artists=artists)
 
 
+# Show Artists specialized in Japanese style: page acessible to all users
 @app.route("/show_japanese")
 def show_japanese():
     artists = list(mongo.db.artists.find(
@@ -230,6 +245,7 @@ def show_japanese():
     return render_template("show-styles.html", artists=artists)
 
 
+# Show Artists specialized in Realistic style: page acessible to all users
 @app.route("/show_realism")
 def show_realism():
     artists = list(mongo.db.artists.find(
