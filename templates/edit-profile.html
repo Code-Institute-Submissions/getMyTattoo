@@ -217,7 +217,7 @@ Edit your profile
 <div class="row">
 <div class="col-sm-12 center">
 <button type="submit" class="btn btn-light btn-lg btn-form">Save <i class="fas fa-cloud-upload-alt"></i></button>
-<button type="submit" class="btn btn-light btn-lg btn-form" href="{{ url_for('profile', username=session['user']) }}">Cancel <i class="fas fa-backspace"></i></button>
+<button type="button" class="btn btn-light btn-lg btn-form" href="{{ url_for('profile', username=session['user']) }}" onclick="back()">Cancel <i class="fas fa-backspace"></i></button>
 </div>
 </div>
   </form>
