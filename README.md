@@ -16,7 +16,7 @@ The base page has elements that all the pages have in common, which are a sticky
 
 The home page welcomes the users and explains briefly what the website is about.
 Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need a guidance to help them starting the navigation.
-Right after this section I repeated the search box, and an area with the last tattoo artists that added or updated their profile.
+Right after this section I repeated the search box, and an area with the last 5 tattoo artists that added their profile.
 All users can access this page and search freely the database.
 
 
@@ -29,6 +29,9 @@ For each result there is a row with a profile picture of the tattoo artist (on t
 In this way the user can understand in a glance if the tattoo artist might be of interest, or not. 
 In case the user wants to know more about one tattoo artist, there is a link at the bottom of the central information section that leads directly to the artist page.
 A target attribute has been added to the link that leads to the artist's page: in this way the user doesn't lose the search results if clicks on a link.
+
+
+### All Artists
 
 
 ### Show Styles
@@ -166,6 +169,8 @@ You can view my prototypes clicking on the following links:
 
 Prototyping has been made with Adobe XD.
 
+While coding I changed a little bit the layout because new ideas came in my mind, so the final result is a little different from the prototype.
+
 
 
 * **Surface Plane**
@@ -200,24 +205,61 @@ I decided to make black and grey the main characters of the design because I wan
 
 ### Design
 
+The website has a simple layout based on Bootstrap cards and Bootstrap forms.
+I customized the design to make it more tailored on my needs and my vision.
 
 
 ### Colour Scheme
 
+The colour palette is very basic, but the shades have been accurately chosen according to different criteria:
+* overall harmony of shades;
+* no eyestrain;
+* evocation of the tattoo and ink concept.
 
+To make the design more tridimensional and deeper, I used a shadow box on images. 
+
+Buttons on hover have a white glowing effect that looks like they are coming out from the screen.
 
 ### Typography
 
+For this project I decided to pair Montserrat with Shadows Into Light, two Google Fonts that I think are great for this website.
+
+Montserrat, which is modern and clear, has been used for almost any text on the website.
+
+![Montserrat](static/documents/imagery/montserrat.png)
+
+Shadows Into Light, which is a cursive font, has been used for flashed messages and for the tattoo artists' names. This font is very appropriate with the style of tattoos, and I chose it to remind of a handwritten signature.
+
+![Shadows Into Light](static/documents/imagery/shadows.png)
 
 
 ### Imagery
 
+Images have been taken mostly from other tattoo websites or artists' real profiles.
+
 
 ### Wireframes
 
+Wireframes have been made with Adobe XD.
 
+You can take a look at them here:
+
+* [Mobile Prototype](static/documents/wireframes/mobile.pdf)
+
+* [Desktop Prototyep](static/documents/wireframes/desktop.pdf)
 
 ### Features
+
+The website is responsive on all screens.
+
+The sticky navigation bar collapse into a toggler on tablets and smaller screens.
+
+Despite having many pages, the content is easily navigable thanks to the links provided in the navigation bar.
+
+The search box also helps the user to find easily a specific content.
+I decided to add the target attribute to search results. In this way, when a user clicks on a specific result to access more details, a new tab is opened and the user doesn't lose the results page.
+
+Images guide the user through the navigation, and a carousel on artists' previews give the chance to access more content without clicking or moving the mouse.
 
 
 
