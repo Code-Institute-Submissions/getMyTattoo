@@ -112,7 +112,7 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route("/add_profile<username>", methods=["GET", "POST"])
+@app.route("/add_profile/<username>", methods=["GET", "POST"])
 def add_profile(username):
 
     username = mongo.db.users.find_one(
@@ -123,10 +123,11 @@ def add_profile(username):
             "artist_name": request.form.get("artist_name"),
             "address": request.form.get("address"),
             "city": request.form.get("city"),
+            "country": request.form.get("country"),
             "phone": request.form.get("phone"),
             "email": request.form.get("email"),
             "facebook": request.form.get("facebook"),
-            "instagram": request.form.get("artist_name"),
+            "instagram": request.form.get("instagram"),
             "profile_url": request.form.get("profile_url"),
             "languages": request.form.get("languages"),
             "style": request.form.get("style"),
@@ -147,7 +148,7 @@ def add_profile(username):
     return render_template("add-profile.html", username=username)
 
 
-@app.route("/edit_profile<username>", methods=["GET", "POST"])
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})
@@ -162,10 +163,11 @@ def edit_profile(username):
                 "artist_name": request.form.get("artist_name"),
                 "address": request.form.get("address"),
                 "city": request.form.get("city"),
+                "country": request.form.get("country"),
                 "phone": request.form.get("phone"),
                 "email": request.form.get("email"),
                 "facebook": request.form.get("facebook"),
-                "instagram": request.form.get("artist_name"),
+                "instagram": request.form.get("instagram"),
                 "profile_url": request.form.get("profile_url"),
                 "languages": request.form.get("languages"),
                 "style": request.form.get("style"),

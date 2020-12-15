@@ -17,7 +17,7 @@ Add {{ username }}'s profile
             <div class="form-group scroll">
                 <label for="artist_name"><i class="fa fa-user form-icon-profile"></i> Your Name</label>
                 <input type="text" class="form-control" id="artist_name" name="artist_name" minlength="3" maxlength="30"
-                    pattern="^[a-zA-Z]{3,30}$" required>
+                    pattern="^[a-zA-Z ]{3,30}$" required>
                 <div class="valid-feedback feedback">
                     Great!
                 </div>
@@ -37,14 +37,28 @@ Add {{ username }}'s profile
                 </div>
             </div>
 
-            <div class="form-group scroll">
-                <label for="city"><i class="fas fa-city"></i> City</label>
-                <input type="text" class="form-control" id="city" name="city" required>
-                <div class="valid-feedback feedback">
-                    Great!
+            <div class="form-row">
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="city"><i class="fas fa-city"></i> City</label>
+                    <input type="text" class="form-control" id="city" name="city" value="{{ artist.city }}">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid name.
+                    </div>
                 </div>
-                <div class="invalid-feedback feedback">
-                    Please enter a valid name.
+
+                <div class="form-group col-md-6 scroll">
+                    <label for="country"><i class="fas fa-globe"></i> Country/State</label>
+                    <input type="text" class="form-control" id="country" name="country" value="{{ artist.country }}">
+                    <div class="valid-feedback feedback">
+                        Great!
+                    </div>
+                    <div class="invalid-feedback feedback">
+                        Please enter a valid name.
+                    </div>
                 </div>
             </div>
 

@@ -18,10 +18,10 @@
                         {{ artist.artist_name }}
                     </div>
                     <div class="col-sm-12 col-lg-6 icon-section center-tablet scroll">
-                        <a href="tel:{{ artist.phone }}" class= "icon-profile link"><i class="fas fa-phone"></i></a>
-                        <a href="mailto:{{ artist.email }}" class="icon-profile link"><i class="fas fa-at"></i></a>
-                        <a href="{{ artist.facebook }}" class="icon-profile link" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                        <a href="{{ artist.instagram }}" class="icon-profile link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="tel:{{ artist.phone }}" class= "link"><i class="fas fa-phone icon-profile "></i></a>
+                        <a href="mailto:{{ artist.email }}" class="link"><i class="fas fa-at icon-profile "></i></a>
+                        <a href="{{ artist.facebook }}" class="link" target="_blank" rel="noopener"><i class="fab fa-facebook icon-profile "></i></a>
+                        <a href="{{ artist.instagram }}" class="link" target="_blank" rel="noopener"><i class="fab fa-instagram icon-profile "></i></a>
                     </div>
                 </div>
                 <div class="row address-row">
@@ -29,7 +29,7 @@
                         <p class="text-profile">You can find me at:</p>
                         <address class="text-profile font-italic">{{ artist.address }}</address>
                         <p class="text-profile font-italic">{{ artist.city }}</p>
-                        <p class="text-profile font-italic">{{ artist.state }}</p>
+                        <p class="text-profile font-italic">{{ artist.country }}</p>
                     </div>
                 </div>
                 <div class="row">
