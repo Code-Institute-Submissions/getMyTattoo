@@ -19,7 +19,7 @@ Delete {{ username }}'s profile
         <div class="row">
     <div class="col-sm-12 center">
        <a href="{{ url_for('profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Oh, no! Take me back <i class="fas fa-backward"></i></a>
-       <a href="{{ url_for('delete_profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Yes, I want to delete my profile <i class="fas fa-user-minus"></i></a>
+       <a href="{{ url_for('delete_profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Yes, delete me! <i class="fas fa-user-minus"></i></a>
     </div>
     </div>
       

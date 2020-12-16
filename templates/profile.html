@@ -4,6 +4,10 @@
 {{ username }}'s profile
 {% endblock %}
 
+{% block profile %}
+active
+{% endblock %}
+
 {% block content %}
 <div class="container">
 <h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
