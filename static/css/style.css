@@ -355,7 +355,7 @@ object-fit: cover;
     border-radius: 2.5rem;
 }
 
-legend{
+.panel-text{
     color: black;
     text-align: center;
     margin-top: 3rem;

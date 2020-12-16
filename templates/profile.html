@@ -11,13 +11,14 @@ active
 
 {% block content %}
 <div class="container">
-<h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
+    <h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
 
-<!--All the info submitted from the artist are displayed here-->
+    <!--All the info submitted from the artist are displayed here-->
     <div class="container profile-container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-4 center scroll">
-                <img src="{{ artist.profile_url }}" class="img-panel profile-pic" alt="{{ artist.artist_name }}'s profile picture'">
+                <img src="{{ artist.profile_url }}" class="img-panel profile-pic"
+                    alt="{{ artist.artist_name }}'s profile picture'">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 information-section">
                 <div class="row">
@@ -27,8 +28,10 @@ active
                     <div class="col-sm-12 col-md-6 icon-section center-mobile scroll">
                         <a href="tel:{{ artist.phone }}" class="link"><i class="fas fa-phone icon-profile "></i></a>
                         <a href="mailto:{{ artist.email }}" class="link"><i class="fas fa-at icon-profile "></i></a>
-                        <a href="{{ artist.facebook }}" class="link" target="_blank" rel="noopener"><i class="fab fa-facebook icon-profile "></i></a>
-                        <a href="{{ artist.instagram }}" class="link" target="_blank" rel="noopener"><i class="fab fa-instagram icon-profile "></i></a>
+                        <a href="{{ artist.facebook }}" class="link" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook icon-profile "></i></a>
+                        <a href="{{ artist.instagram }}" class="link" target="_blank" rel="noopener"><i
+                                class="fab fa-instagram icon-profile "></i></a>
                     </div>
                 </div>
                 <div class="row address-row">
@@ -71,12 +74,14 @@ active
             </div>
         </div>
     </div>
-	<div class="row">
-    <div class="col-sm-12 center">
-       <a href="{{ url_for('edit_profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Edit <i class="fas fa-pen-fancy"></i></a>
-       <a href="{{ url_for('confirm_delete', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Delete <i class="fas fa-trash-alt"></i></a>
+    <div class="row">
+        <div class="col-sm-12 center">
+            <a href="{{ url_for('edit_profile', username=session['user']) }}" type="submit"
+                class="btn btn-light btn-lg btn-form">Edit <i class="fas fa-pen-fancy"></i></a>
+            <a href="{{ url_for('confirm_delete', username=session['user']) }}" type="submit"
+                class="btn btn-light btn-lg btn-form">Delete <i class="fas fa-trash-alt"></i></a>
+        </div>
     </div>
-    </div>
- 
+
 </div>
 {% endblock %}
