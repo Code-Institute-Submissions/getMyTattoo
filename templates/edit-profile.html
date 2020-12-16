@@ -4,6 +4,7 @@
 Edit {{ username }}'s profile
 {% endblock %}
 
+<!--Set active class to appropriate navbar link-->
 {% block edit %}
 active
 {% endblock %}
@@ -14,7 +15,7 @@ active
         Edit your profile
     </h4>
     <div class="container profile-container">
-
+        <!--Form displaying the user's information inside the fields, with possibility to apply chamges-->
         <form class="add-profile needs-validation" action="{{ url_for('edit_profile', username=session['user']) }}"
             method="POST" novalidate>
             <div class="form-group scroll">

@@ -12,6 +12,7 @@ Add {{ username }}'s profile
     </h4>
     <div class="container profile-container">
 
+<!--Form that sends artist's personal info to the database-->
         <form class="add-profile needs-validation" action="{{ url_for('add_profile', username=session['user']) }}"
             method="POST" novalidate>
             <div class="form-group scroll">
@@ -41,7 +42,7 @@ Add {{ username }}'s profile
 
                 <div class="form-group col-md-6 scroll">
                     <label for="city"><i class="fas fa-city"></i> City</label>
-                    <input type="text" class="form-control" id="city" name="city" value="{{ artist.city }}">
+                    <input type="text" class="form-control" id="city" name="city">
                     <div class="valid-feedback feedback">
                         Great!
                     </div>
@@ -52,7 +53,7 @@ Add {{ username }}'s profile
 
                 <div class="form-group col-md-6 scroll">
                     <label for="country"><i class="fas fa-globe"></i> Country/State</label>
-                    <input type="text" class="form-control" id="country" name="country" value="{{ artist.country }}">
+                    <input type="text" class="form-control" id="country" name="country">
                     <div class="valid-feedback feedback">
                         Great!
                     </div>

@@ -6,24 +6,29 @@ Delete {{ username }}'s profile
 
 {% block content %}
 <div class="container">
-<h4 class="flash">It looks like you want to delete your profile</h4>
+    <!--Ask if the user wants to delete the profile-->
+    <h4 class="flash">It looks like you want to delete your profile</h4>
     <div class="container profile-container">
-    <div class="row">
-    <div class="col-sm-12 center">
-    <h4 class="flash confirm">Really sure?<br>
-    <br>
-    You will lose everything!
-    </h4>
-    </div>
-    </div>
         <div class="row">
-    <div class="col-sm-12 center">
-       <a href="{{ url_for('profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Oh, no! Take me back <i class="fas fa-backward"></i></a>
-       <a href="{{ url_for('delete_profile', username=session['user']) }}" type="submit" class="btn btn-light btn-lg btn-form">Yes, delete me! <i class="fas fa-user-minus"></i></a>
+            <div class="col-sm-12 center">
+                <h4 class="flash confirm">Really sure?<br>
+                    <br>
+                    You will lose everything!
+                </h4>
+            </div>
+        </div>
+
+        <!--Buttons with double choice: delete or go back-->
+        <div class="row">
+            <div class="col-sm-12 center">
+                <a href="{{ url_for('profile', username=session['user']) }}" type="submit"
+                    class="btn btn-light btn-lg btn-form">Oh, no! Take me back <i class="fas fa-backward"></i></a>
+                <a href="{{ url_for('delete_profile', username=session['user']) }}" type="submit"
+                    class="btn btn-light btn-lg btn-form">Yes, delete me! <i class="fas fa-user-minus"></i></a>
+            </div>
+        </div>
+
+
+
     </div>
-    </div>
-      
-    
- 
-</div>
-{% endblock %}
+    {% endblock %}

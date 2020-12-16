@@ -4,6 +4,7 @@
 Register to Get My Tattoo
 {% endblock %}
 
+<!--Set active class to appropriate navbar link-->
 {% block register %}
 active
 {% endblock %}
@@ -11,6 +12,7 @@ active
 {% block content %}
 <div class="container background-image">
     <div class="row">
+        <!--Form to register-->
         <form class="col col-md-6 offset-md-1 sign-panel needs-validation" action="{{ url_for('register') }}"
             method="POST" novalidate>
             <legend class="subtitle">Hello, artist!
@@ -50,6 +52,8 @@ active
             </div>
             <button class="btn btn-light btn-block" type="submit"> <i
                     class="fas fa-sign-in-alt form-icon text-muted"></i></button>
+
+            <!--Link that takes the user to the login template-->
             <div class="row">
                 <div class="col-sm-12">
                     <p class="link-form">Already have an account?

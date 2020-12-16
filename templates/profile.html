@@ -4,6 +4,7 @@
 {{ username }}'s profile
 {% endblock %}
 
+<!--Set active class to appropriate navbar link-->
 {% block profile %}
 active
 {% endblock %}
@@ -11,6 +12,8 @@ active
 {% block content %}
 <div class="container">
 <h4 class="flash">This is your profile, {{ username.capitalize() }}! Show the world how great you are</h4>
+
+<!--All the info submitted from the artist are displayed here-->
     <div class="container profile-container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-4 center scroll">
@@ -45,6 +48,8 @@ active
                 </div>
             </div>
         </div>
+
+        <!--Gallery-->
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-2 scroll">
                 <img src="{{ artist.photo_1 }}" class="image-profile" alt="">
