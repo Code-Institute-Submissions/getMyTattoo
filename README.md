@@ -1,6 +1,8 @@
 # Get My Tattoo
 
 
+![Get My Tattoo](static/documents/imagery/mockup.png)
+
 For the third Milestone Project, I decided to design a website where tattoo artists can register and add their profile to a database. Users (customers) can then search the database without registering and find their ideal tattoo artist.
 I had this idea since it is not easy to find a tattoo artist that does exactly what we want. This research might take a considerable amount of time, and people nowadays have always less free time. People need to find information easily and fast.
 The structure of the website is divided into two: one area is visible to all users, and one area is visible only to registered users.
@@ -16,9 +18,13 @@ The base page has elements that all the pages have in common, which are a sticky
 
 The home page welcomes the users and explains briefly what the website is about.
 Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need guide to help them to start the navigation.
+
+![Cards with tattoo styles](static/documents/imagery/cardsMockup.png)
+
 Right after this section, I repeated the search box and an area with the last 5 tattoo artists that added their profile.
 All users can access this page and search freely the database.
 
+![Last Added Artists](static/documents/imagery/lastAdded.png)
 
 ### Search Page
 
@@ -33,6 +39,7 @@ A target attribute has been added to the link that leads to the artist's page: i
 
 ### All Artists
 
+This page displays all the artists in the database, in alphabetical order.
 
 ### Show Styles
 
@@ -54,6 +61,7 @@ The register page has an image on the background of a bearded tattooed man that 
 The form has two fields: username (that accept letters from the Latin alphabet and numbers) and password (with a length between 5 and 20 char).
 A small text under the section has a link to the log in page for those users that already have an account.
 
+![Register Mockup](static/documents/imagery/registerMockup.png)
 
 ### Log In - only for tattoo artists
 
@@ -89,6 +97,7 @@ This page takes the same layout of the “Add profile”, but instead of having 
 Clicking on the fields, the user can delete the content and type something new.
 At the bottom of the page there are two buttons: one allows the user to save the changes, the other one allows to cancel the changes without saving.
 
+![Edit Profile Mockup](static/documents/imagery/editmockup.png)
 
 ### Delete profile - only for tattoo artists
 
@@ -97,12 +106,15 @@ However, to prevent unintentional deleting, I added an extra step.
 The page asks for a confirmation: if the user really wants to delete the profile, then a button cancel the profile and takes the user back to the general home page.
 If the user changes his/her mind and wants to go back, a button guide him/her to the profile page.
 
+![Delete Mockup](static/documents/imagery/deleteMockup.png)
+
 
 ### My profile - only for tattoo artists
 
 This page shows the artist’s page with the information that he/she provided.
 A button allows to edit the profile (linking to the “Edit profile” page, and one button to delete it (linking as I mentioned before to the “Delete” page.
 
+![Profile Mockup](static/documents/imagery/profilemockup.png)
 
 ---
 
