@@ -1,8 +1,8 @@
 # Get My Tattoo
 
 
-For the third Milestone Project I decided to design a website where tattoo artists can register and add their profile to a database. Users (customers) can then search the database without registering and find their ideal tattoo artist.
-I had this idea since it not easy to find a tattoo artist that does exactly what we want. It is a research that might take a considerable amount of time, and people nowadays have always less free time. People need to find information easily and fast.
+For the third Milestone Project, I decided to design a website where tattoo artists can register and add their profile to a database. Users (customers) can then search the database without registering and find their ideal tattoo artist.
+I had this idea since it is not easy to find a tattoo artist that does exactly what we want. This research might take a considerable amount of time, and people nowadays have always less free time. People need to find information easily and fast.
 The structure of the website is divided into two: one area is visible to all users, and one area is visible only to registered users.
 
 View the live project here. [Get My Tattoo](https://getmytattoo.herokuapp.com/get_artists)
@@ -15,18 +15,18 @@ The base page has elements that all the pages have in common, which are a sticky
 ### Home Page
 
 The home page welcomes the users and explains briefly what the website is about.
-Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need a guidance to help them starting the navigation.
-Right after this section I repeated the search box, and an area with the last 5 tattoo artists that added their profile.
+Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need guide to help them to start the navigation.
+Right after this section, I repeated the search box and an area with the last 5 tattoo artists that added their profile.
 All users can access this page and search freely the database.
 
 
 ### Search Page
 
 
-The search page displays  the results of the user's research.
+The search page displays the results of the user's research.
 
-For each result there is a row with a profile picture of the tattoo artist (on the left), an information section (on the center) displaying the name of the artist and his/her biography, and a carousel (on the right) with three pictures of the artists’s tattoos.
-In this way the user can understand in a glance if the tattoo artist might be of interest, or not. 
+For each result, there is a row with a profile picture of the tattoo artist (on the left), an information section (on the center) displaying the name of the artist and his/her biography, and a carousel (on the right) with three pictures of the artists’ tattoos.
+In this way, the user can understand at a glance if the tattoo artist might be of interest, or not. 
 In case the user wants to know more about one tattoo artist, there is a link at the bottom of the central information section that leads directly to the artist page.
 A target attribute has been added to the link that leads to the artist's page: in this way the user doesn't lose the search results if clicks on a link.
 
@@ -36,21 +36,21 @@ A target attribute has been added to the link that leads to the artist's page: i
 
 ### Show Styles
 
-That page displays a list of artists which share the same tattoo style.
+That page displays a list of artists who share the same tattoo style.
 
-The layout is the same as the artists section on the home page.
+The layout is the same as the artists' section on the home page.
 
 
 ### Show Artist Page
 
 This page displays all the information about a single artist.
-Here users cand find the address, the contact area, information about the languages that the artist speaks, the style he/she has, and a gallery with up to six images showing some of the best work of art the artist made.
+Here users can find the address, the contact area, information about the languages that the artist speaks, the style he/she has, and a gallery with up to six images showing some of the best work of art the artist made.
 A bottom at the end of the page takes the user back to the home page. 
 
 
 ### Register - if the user is a tattoo artist
 
-The register page has a image on the background of a bearded tattooed man that looks in the direction of the form.
+The register page has an image on the background of a bearded tattooed man that looks in the direction of the form.
 The form has two fields: username (that accept letters from the Latin alphabet and numbers) and password (with a length between 5 and 20 char).
 A small text under the section has a link to the log in page for those users that already have an account.
 
@@ -96,6 +96,7 @@ This page allows the tattoo artist to delete his/her profile.
 However, to prevent unintentional deleting, I added an extra step. 
 The page asks for a confirmation: if the user really wants to delete the profile, then a button cancel the profile and takes the user back to the general home page.
 If the user changes his/her mind and wants to go back, a button guide him/her to the profile page.
+
 
 ### My profile - only for tattoo artists
 
@@ -216,9 +217,22 @@ The colour palette is very basic, but the shades have been accurately chosen acc
 * no eyestrain;
 * evocation of the tattoo and ink concept.
 
+![Colour Palette](static/documents/imagery/TattooPalette.png)
+Colour Palette created with [Coolors](https://coolors.co/)
+
+
 To make the design more tridimensional and deeper, I used a shadow box on images. 
 
 Buttons on hover have a white glowing effect that looks like they are coming out from the screen.
+
+I changed the shades of green and red that came with Bootstrap JavaScript Validation, because the visual effect on the grey background was disturbing.
+
+I darkened them with:
+
+* [#006644](https://www.colorhexa.com/006644) for valid field;
+
+* [#660022](https://www.colorhexa.com/660022) for invalid field.
+
 
 ### Typography
 
@@ -261,10 +275,17 @@ I decided to add the target attribute to search results. In this way, when a use
 
 Images guide the user through the navigation, and a carousel on artists' previews give the chance to access more content without clicking or moving the mouse.
 
+Globally, the website is easily readable, links are easy to understand.
+
 
 
 ### Features to implement
 
+I would like to add an admin dashboard, where an admin can perform various tasks and keep trace of users' activity.
+
+I would like also to connect the website with a payment system, to make the log in function accessible only to users that have paid a fee.
+
+Other things to implement in the future, are better accessibility and pagination.
 
 ---
 
@@ -273,7 +294,8 @@ Images guide the user through the navigation, and a carousel on artists' preview
 ### Languages Used
 * HTML5
 * CSS3
-* Javascript
+* JavaScript
+* Python 3.8.6
 
 ### Frameworks, Libraries & Programs Used
 
@@ -287,6 +309,16 @@ Images guide the user through the navigation, and a carousel on artists' preview
 * Chrome DevTools
 * Adobe XD
 * Favicon.ico
+* Html Validator
+* CSS Validator
+* Flask 1.1.2
+* Flask-PyMongo 2.3.0
+* pymongo 3.11.1
+* Werkzeug 1.0.1
+* MongoDB
+* Autoprefixer CSS 9.7.6
+* Am I responsive?
+
 
 ---
 
@@ -332,10 +364,18 @@ Images guide the user through the navigation, and a carousel on artists' preview
 
 ### Code
 
+* Cusotm validation JavaScript code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#custom-styles)
+* Scrolling animation from [ScrollReveal.js](https://scrollrevealjs.org/)
+* Changed placeholder style adapting the code from [W3School](https://www.w3schools.com/howto/howto_css_placeholder.asp)
 
 ### Media
 
 
 
 ### Acknowledgements
+
+I want to thank my beloved husband for giving me the subject idea for this project. He is a tattoo lover and was always looking for an app like this one.
+
+Thank also to [Code Institute](https://codeinstitute.net/), both Tutor and Mentor Support, for supporting and helping through the project. 
+I faced a few issues with GitPod and the support has been amazing.
 
