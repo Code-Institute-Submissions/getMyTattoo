@@ -199,14 +199,14 @@ def edit_profile(username):
 
 
 # Ask for confirmation when user clicks on "delete profile"
-@app.route("/confirm_delete<username>", methods=["GET", "POST"])
+@app.route("/confirm_delete/<username>", methods=["GET", "POST"])
 def confirm_delete(username):
 
     return render_template("confirm-delete.html")
 
 
 # Delete user's profile
-@app.route("/delete<username>")
+@app.route("/delete/<username>")
 def delete_profile(username):
     mongo.db.artists.remove({"created_by": session["user"]})
     flash("Your profile has been deleted. We hope to have you back soon!")

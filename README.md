@@ -318,6 +318,7 @@ Other things to implement in the future, are better accessibility and pagination
 * GitHub
 * GitPod
 * Heroku
+* Randomkeygen
 * Chrome DevTools
 * Adobe XD
 * Favicon.ico
@@ -330,6 +331,7 @@ Other things to implement in the future, are better accessibility and pagination
 * MongoDB
 * Autoprefixer CSS 9.7.6
 * Am I responsive?
+* ScrollReveal.js
 
 
 ---
