@@ -15,10 +15,10 @@ html {
   font-size: 10px;
 }
 
-html, body {
-  margin: auto;
+body {
+  margin: 0 auto;
   padding: 0;
-  width: 96vw;
+  width: 100%;
 }
 
 
@@ -311,7 +311,7 @@ button.navbar-toggler:hover{
 
 /* Search Box */
 .search-box{
-    width: 40rem;
+    max-width: 40rem;
     font-size: 1.5rem;
     border-radius: 2rem;
 }

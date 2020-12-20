@@ -139,6 +139,23 @@ The idea of the tattooed person which is an “outsider” is no more actual and
 That also should convey an idea of credibility and reliability.
 The user (customer) can contact the tattoo artist in many ways: with a phone call, with an email, connecting through Facebook or Instagram.
 
+|   | Opportunity / Problem / Feature | Importance | Viability |
+|---|---------------------------------|------------|-----------|
+| A | Register Functionality          | 5          | 5         |
+| B | Login Functionality             | 5          | 5         |
+| C |  Add Profile Functionality      | 5          | 4         |
+| D | Show Profile Functionality      | 5          | 4         |
+| E | Edit Profile Functionality      | 5          | 4         |
+| F | Search Functionality            | 5          | 4         |
+| G | Contact Artist                  | 5          | 4         |
+| H | Contact Webmaster               | 5          | 5         |
+| I | Paginate search results         | 3          | 3         |
+| J | Logout Functionality            | 5          | 5         |
+| K | Admin Functionality             | 3          | 3         |
+
+
+As shown on the table, I will leave at the end the admin functionality and pagination that will come out with a second release.
+
 
 * **Scope Plane**
 
@@ -297,7 +314,9 @@ I would like to add an admin dashboard, where an admin can perform various tasks
 
 I would like also to connect the website with a payment system, to make the log in function accessible only to users that have paid a fee.
 
-Other things to implement in the future, are better accessibility and pagination.
+Other things to implement in the future, are better accessibility and pagination, plus an improved styling for extra-small screens.
+
+Another thing will be adding custom meta content for description for each page, using Jinja language.
 
 ---
 
@@ -332,6 +351,7 @@ Other things to implement in the future, are better accessibility and pagination
 * Autoprefixer CSS 9.7.6
 * Am I responsive?
 * ScrollReveal.js
+* Techsini mockup generator
 
 
 ---
@@ -340,30 +360,96 @@ Other things to implement in the future, are better accessibility and pagination
 
 ### Functionality Testing 
 
+All the links are working, both internal and external.
+
+The form validation is also working, it prevents the user to submit the form with invalid fields and helps to understand which ones need to be corrected.
+
+![Testing Form Validation](static/documents/imagery/test1.png)
+
+I realized that the validation JavaScript code should be reinforced with regEx, since it allows a user to type for instance "123" in the phone number field, which is obviously not correct.
+It is made by numbers, but there are no phone numbers in the world with only 3 digits.
+This is something I will implement in the future.
+
+The register functionality works properly, it displays the "app-profile" page which is reachable only after a new user registers.
+
+After adding the informations, I have tried to edit successfully the profile: all the previous informations added by the user are visible inside the input areas, and it is possible to edit them.
+
+![Testing Form Validation](static/documents/imagery/test2.png)
+
+And finally I tried to delete the profile successfully:
+
+![Testing Form Validation](static/documents/imagery/test3.png)
+
+At this point, the user is still logged in because the username hasn't been deleted, only the profile.
+
+It is still possible for the user to show again his/her profile simply clicking on "My Profile":
+
+![Testing Form Validation](static/documents/imagery/testNoprofile.png)
+
+An empty profile is displayed, and the user needs only to edit it again with new informations.
+
+If a user wants to delete also his/her username, he/she should contact the website owner. This is easy to do, since in the footer there is a link to contact the webmaster.
+
+![Testing Form Validation](static/documents/imagery/footer.png)
+
+I then tested the "search" functionality by searching the word "manga":
+
+![Testing Form Validation](static/documents/imagery/test4.png)
+
+And as expected, I can see the results displayed on the page:
+
+![Testing Form Validation](static/documents/imagery/test5.png)
+
+I have tried to search for a word that does not exist in the database, and it correctly returns the right message that informs the user that no results have been found:
+
+![Testing Form Validation](static/documents/imagery/noResults.png)
+
+I went on testing the search method with many other words that should refer to: "name", "language", "city", "country - or state-", "style".
+Everything works as expected.
+
+
+I checked if the navbar highlights the right name of the page, and also this functionality works fine.
+
+Html and Css have been validated with HTML Validator and CSS Validator.
+
+I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) and the result was positive:
+
+![Testing Form Validation](static/documents/imagery/pep8.png)
 
 
 ### Usability Testing
 
 
-#### First Time Visitor Testing
-
-
-#### Returning Visitor Testing
-
-
-#### Frequent User Testing
-
 ### Compatibility Testing
+
+I tested the website not only on [Am I responsive?](http://ami.responsivedesign.is/), but also on different mobile screens that I have at home.
+
+The functionality is working everywhere, but there are a few things that need to be fixed on smaller screens. For instance, on a Galaxy Fold which has a width of 280px, the profile image of the artist is not displayed as it should be:
+
+![Error 1](static/documents/imagery/error.png)
+
+![Error 2](static/documents/imagery/error2.png)
+
+On other mobile devices with a bigger width, everything is displayed as expected.
+
+Here an example of an artist page on as it renders on IPhone 6/7/8/Plus:
+
+![Error 2](static/documents/imagery/example.png)
 
 
 ### Performance Testing
 
+The website performs well both on mobile screens and desktop; however, accessibility needs to be improved.
 
+Speed could be improved: taking images from external urls have impact on the loading speed, since they are not optimized for the website.
+This could also have a negative impact for those users that have to pay for more cellular data.
+
+To check performance testing I used Google Test Mobile Friendly, Google Lighthouse and Google PageSpeed Insights for the home page and all-artists page.
 
 
 ### Bugs
 
-
+As previously mentioned, there are some problems with styling on extra-small screens that need to be fixed.
 
 ---
 
