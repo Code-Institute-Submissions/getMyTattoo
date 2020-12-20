@@ -17,7 +17,7 @@ The base page has elements that all the pages have in common, which are a sticky
 ### Home Page
 
 The home page welcomes the users and explains briefly what the website is about.
-Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need guide to help them to start the navigation.
+Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need a guide to help them to start the navigation.
 
 ![Cards with tattoo styles](static/documents/imagery/cardsMockup.png)
 
@@ -59,13 +59,13 @@ A bottom at the end of the page takes the user back to the home page.
 
 The register page has an image on the background of a bearded tattooed man that looks in the direction of the form.
 The form has two fields: username (that accept letters from the Latin alphabet and numbers) and password (with a length between 5 and 20 char).
-A small text under the section has a link to the log in page for those users that already have an account.
+A small text under the section has a link to the login page for those users that already have an account.
 
 ![Register Mockup](static/documents/imagery/registerMockup.png)
 
 ### Log In - only for tattoo artists
 
-This page repeats the same structure of the register page.
+This page repeats the same structure as the register page.
 If a user writes a wrong username or a wrong password, a message tells that there is some mistake.
 
 
@@ -79,23 +79,23 @@ A form with all the fields needed is shown. Here the tattoo artist can add:
 * address
 * city
 * country
-* profile picture (url)
+* profile picture (URL)
 * phone number
 * email
 * link to Facebook
 * link to Instagram
 * languages spoken
 * tattoo style
-* up to six images (url)
+* up to six images (URL)
 
-A button let the user save the profile.
+A button lets the user save the profile.
 
 
 ### Edit profile - only for tattoo artists
 
-This page takes the same layout of the “Add profile”, but instead of having empty fields it shows the values that the user already added before.
+This page takes the same layout of the “Add profile”, but instead of having empty fields, it shows the values that the user already added before.
 Clicking on the fields, the user can delete the content and type something new.
-At the bottom of the page there are two buttons: one allows the user to save the changes, the other one allows to cancel the changes without saving.
+At the bottom of the page, there are two buttons: one allows the user to save the changes, the other one allows to cancel the changes without saving.
 
 ![Edit Profile Mockup](static/documents/imagery/editmockup.png)
 
@@ -103,8 +103,8 @@ At the bottom of the page there are two buttons: one allows the user to save the
 
 This page allows the tattoo artist to delete his/her profile.
 However, to prevent unintentional deleting, I added an extra step. 
-The page asks for a confirmation: if the user really wants to delete the profile, then a button cancel the profile and takes the user back to the general home page.
-If the user changes his/her mind and wants to go back, a button guide him/her to the profile page.
+The page asks for confirmation: if the user really wants to delete the profile, then a button cancels the profile and takes the user back to the general home page.
+If the user changes his/her mind and wants to go back, a button guides him/her to the profile page.
 
 ![Delete Mockup](static/documents/imagery/deleteMockup.png)
 
@@ -112,7 +112,7 @@ If the user changes his/her mind and wants to go back, a button guide him/her to
 ### My profile - only for tattoo artists
 
 This page shows the artist’s page with the information that he/she provided.
-A button allows to edit the profile (linking to the “Edit profile” page, and one button to delete it (linking as I mentioned before to the “Delete” page.
+A button allows the user to edit the profile (linking to the “Edit profile” page, and one button to delete it (linking as I mentioned before to the “Delete” page.
 
 ![Profile Mockup](static/documents/imagery/profilemockup.png)
 
@@ -128,14 +128,14 @@ It should be a window for artists to show their abilities, and at the same time 
 
 When a person is looking for a new tattoo, he/she wants to find a person that is able to transform the idea into a permanent design. Not all tattoo artists do the same things, they are always specialized in some particular styles. 
 
-Moreover, it is always better when customer and artist speak the same language. They can communicate properly and share ideas, feelings, etc.
+Moreover, it is always better when customers and artists speak the same language. They can communicate properly and share ideas, feelings, etc.
 We live in a world where immigration is a common thing, we have around people coming from all over the world and language is not always the same (or at the same level). This is something that I experienced directly, as an Italian living in Sweden.
 Also, we live in a society where it is easy to move from one city to another, but also from one country to another: it happens often that customers are willing to travel just to have the tattoo done by a specific person. 
 
 There are two big websites that have a great database for tattoo artists: [Tattodoo](https://www.tattoodo.com/) and [Inkstinct](https://inkstinct.co/). They have very rich search options, but they are missing the language thing and they are too confusing. They don’t go straight to the point as my website wants to do.
 
-According to an article appeared on [Medium](https://medium.com/daliaresearch/who-has-the-most-tattoos-its-not-who-you-d-expect-1d5ffff660f8), the average person nowadays that has tattoo is a person with high education, with a good income, that lives in a urban area.
-The idea of the tattooed person which is an “outsider” is no more actual and I think that the design of the website should reflect this aspect. It should be intuitive, modern and with a strong personality.
+According to an article that appeared on [Medium](https://medium.com/daliaresearch/who-has-the-most-tattoos-its-not-who-you-d-expect-1d5ffff660f8), the average person nowadays that has a tattoo is a person with high education, with a good income, that lives in an urban area.
+The idea of the tattooed person as an “outsider” is no longer actual and I think that the design of the website should reflect this aspect. It should be intuitive, modern and with a strong personality.
 That also should convey an idea of credibility and reliability.
 The user (customer) can contact the tattoo artist in many ways: with a phone call, with an email, connecting through Facebook or Instagram.
 
@@ -161,27 +161,27 @@ As shown on the table, I will leave at the end the admin functionality and pagin
 
 It is very important that the tattoo artist can have his/her own virtual window as a showcase of his/her job.
 To have the maximum focus on the artist it is of fundamental importance that every single artist has his/her own page with no distractions around.
-Links that allow connections between artist and customer are also of fundamental importance.
+Links that allow connections between artists and customers are also of fundamental importance.
 To help the tattoo artist editing and updating the profile anytime, there must be a functionality to do it independently.
-Also, to keep the informations on the website consistent for all the tattoo artists, it should not be allowed for a tattoo artist to add extra fields. In this way, everyone has equal instruments to reach and attract customers.
+Also, to keep the information on the website consistent for all the tattoo artists, it should not be allowed for a tattoo artist to add extra fields. In this way, everyone has equal instruments to reach and attract customers.
 
 
 * **Structure Plane**
 
 The sticky navbar allows users to navigate easily on the website without going back and forth wasting time, considering also that the website has many pages and without a sticky navbar the user can easily get lost.
 
-The search bar, fundamental feature, is placed on the navbar and is also repeated on the home page.
+The search bar, a fundamental feature, is placed on the navbar and is also repeated on the home page.
 
 All the buttons have a glowing effect on hover, to add focus and attract the user. At the bottom of almost every page there is a button that allows the user to do something: for example, to edit the profile, delete it, or go back to the home page.
 
-A smooth scrolling effect add some extra class and modernity, obtained with ScrollReveal.js.
+A smooth scrolling effect adds some extra class and modernity, obtained with ScrollReveal.js.
 
 Validation on forms is adapted and customized from Bootstrap JavaScript validation. A feedback tells the user if the fields are correctly filled or not.
 This validation also prevents the form from being submitted with invalid fields.
 
 The website is divided into two different structures: one is for all the users, one is only for registered users (in this case, only for tattoo artists).
 
-The structure visibile to all users includes the home page and the search functionality, which allows anyone to access tattoo artists' profiles.
+The structure visible to all users includes the home page and the search functionality, which allows anyone to access tattoo artists' profiles.
 
 The other structure level is dedicated only to tattoo artists. They can register with a username and add their profile, which will be visible to anyone. 
 Tattoo artists can also edit their own profile or delete it directly without contacting an admin of the website.
@@ -191,15 +191,15 @@ Tattoo artists can also edit their own profile or delete it directly without con
 
 The pattern design is consistent throughout all the pages.
 
-You can view my prototypes clicking on the following links:
+You can view my prototypes by clicking on the following links:
 
 * [Mobile Prototype](static/documents/wireframes/mobile.pdf)
 
-* [Desktop Prototyep](static/documents/wireframes/desktop.pdf)
+* [Desktop Prototype](static/documents/wireframes/desktop.pdf)
 
 Prototyping has been made with Adobe XD.
 
-While coding I changed a little bit the layout because new ideas came in my mind, so the final result is a little different from the prototype.
+While coding I changed a little bit the layout because new ideas came to my mind, so the final result is a little different from the prototype.
 
 
 
@@ -207,7 +207,7 @@ While coding I changed a little bit the layout because new ideas came in my mind
 
 The absence of colours is dominant in this website.
 
-I decided to make black and grey the main characters of the design because I wanted to give the feeling of ink and tattooes on the screen.
+I decided to make black and grey the main characters of the design because I wanted to give the feeling of ink and tattoos on the screen.
 
 
 ### User stories
@@ -226,7 +226,7 @@ I decided to make black and grey the main characters of the design because I wan
 #### Returning Visitor Goals
 
 * As a user interested in tattoos, I want to contact a specific tattoo artist.
-* As a user interested in tattoos, I want to have a look at last added tattoo artists.
+* As a user interested in tattoos, I want to have a look at the last added tattoo artists.
 
 * As a tattoo artist, I want to edit my profile.
 * As a tattoo artist, I want to delete my profile.
@@ -236,7 +236,7 @@ I decided to make black and grey the main characters of the design because I wan
 ### Design
 
 The website has a simple layout based on Bootstrap cards and Bootstrap forms.
-I customized the design to make it more tailored on my needs and my vision.
+I customized the design to make it more tailored to my needs and my vision.
 
 
 ### Colour Scheme
@@ -265,7 +265,7 @@ I darkened them with:
 
 ### Typography
 
-For this project I decided to pair Montserrat with Shadows Into Light, two Google Fonts that I think are great for this website.
+For this project, I decided to pair Montserrat with Shadows Into Light, two Google Fonts that I think are great for this website.
 
 Montserrat, which is modern and clear, has been used for almost any text on the website.
 
@@ -289,13 +289,13 @@ You can take a look at them here:
 
 * [Mobile Prototype](static/documents/wireframes/mobile.pdf)
 
-* [Desktop Prototyep](static/documents/wireframes/desktop.pdf)
+* [Desktop Prototype](static/documents/wireframes/desktop.pdf)
 
 ### Features
 
 The website is responsive on all screens.
 
-The sticky navigation bar collapse into a toggler on tablets and smaller screens.
+The sticky navigation bar collapses into a toggler on tablets and smaller screens.
 
 Despite having many pages, the content is easily navigable thanks to the links provided in the navigation bar.
 
@@ -310,7 +310,7 @@ Globally, the website is easily readable, links are easy to understand.
 
 ### Features to implement
 
-I would like to add an admin dashboard, where an admin can perform various tasks and keep trace of users' activity.
+I would like to add an admin dashboard, where an admin can perform various tasks and keep track of users' activity.
 
 I would like also to connect the website with a payment system, to make the log in function accessible only to users that have paid a fee.
 
@@ -464,7 +464,7 @@ As previously mentioned, there are some problems with styling on extra-small scr
 
 ### Code
 
-* Cusotm validation JavaScript code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#custom-styles)
+* Custom validation JavaScript code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#custom-styles)
 * Scrolling animation from [ScrollReveal.js](https://scrollrevealjs.org/)
 * Changed placeholder style adapting the code from [W3School](https://www.w3schools.com/howto/howto_css_placeholder.asp)
 
@@ -476,6 +476,6 @@ As previously mentioned, there are some problems with styling on extra-small scr
 
 I want to thank my beloved husband for giving me the subject idea for this project. He is a tattoo lover and was always looking for an app like this one.
 
-Thank also to [Code Institute](https://codeinstitute.net/), both Tutor and Mentor Support, for supporting and helping through the project. 
+Thanks also to [Code Institute](https://codeinstitute.net/), both Tutor and Mentor Support (Spencer Barriball), for supporting and helping through the project. 
 I faced a few issues with GitPod and the support has been amazing.
 
