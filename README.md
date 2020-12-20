@@ -121,7 +121,7 @@ A button allows the user to edit the profile (linking to the “Edit profile” 
 ## User Experience (UX)
 
 
-* **Strategy Plane**
+* **:bookmark_tabs: Strategy Plane**
 
 The website should help tattoo artists getting in touch with new customers.
 It should be a window for artists to show their abilities, and at the same time allows users to find their ideal tattoo.
@@ -157,7 +157,7 @@ The user (customer) can contact the tattoo artist in many ways: with a phone cal
 As shown on the table, I will leave at the end the admin functionality and pagination that will come out with a second release.
 
 
-* **Scope Plane**
+* **:bookmark_tabs: Scope Plane**
 
 It is very important that the tattoo artist can have his/her own virtual window as a showcase of his/her job.
 To have the maximum focus on the artist it is of fundamental importance that every single artist has his/her own page with no distractions around.
@@ -166,7 +166,7 @@ To help the tattoo artist editing and updating the profile anytime, there must b
 Also, to keep the information on the website consistent for all the tattoo artists, it should not be allowed for a tattoo artist to add extra fields. In this way, everyone has equal instruments to reach and attract customers.
 
 
-* **Structure Plane**
+* **:bookmark_tabs: Structure Plane**
 
 The sticky navbar allows users to navigate easily on the website without going back and forth wasting time, considering also that the website has many pages and without a sticky navbar the user can easily get lost.
 
@@ -187,7 +187,7 @@ The other structure level is dedicated only to tattoo artists. They can register
 Tattoo artists can also edit their own profile or delete it directly without contacting an admin of the website.
 
 
-* **Skeleton Plane**
+* **:bookmark_tabs: Skeleton Plane**
 
 The pattern design is consistent throughout all the pages.
 
@@ -203,7 +203,7 @@ While coding I changed a little bit the layout because new ideas came to my mind
 
 
 
-* **Surface Plane**
+* **:bookmark_tabs: Surface Plane**
 
 The absence of colours is dominant in this website.
 
@@ -212,7 +212,7 @@ I decided to make black and grey the main characters of the design because I wan
 
 ### User stories
 
-#### First Time Visitor Goals
+#### :computer: First Time Visitor Goals
 
 * As a user interested in tattoos, I want to find easily information about tattoo artists in my area.
 * As a user interested in tattoos, I want to find easily information about tattoo artists specialized in a particular tattoo style.
@@ -223,7 +223,7 @@ I decided to make black and grey the main characters of the design because I wan
 * As a tattoo artist, I want to have a look at my competitors' works.
 * As a tattoo artist, I want to contact the owner of the website.
 
-#### Returning Visitor Goals
+#### :computer: Returning Visitor Goals
 
 * As a user interested in tattoos, I want to contact a specific tattoo artist.
 * As a user interested in tattoos, I want to have a look at the last added tattoo artists.
@@ -519,6 +519,23 @@ To check performance testing I used Google Test Mobile Friendly, Google Lighthou
 ### Bugs
 
 As previously mentioned, there are some problems with styling on extra-small screens that need to be fixed.
+
+---
+
+## Database
+
+The database used for this project has two collections: user and artist.
+
+The "user" collection stores the username and the password of each registered user.
+The password is hashed through Werkzeug.
+
+![User Database](static/documents/imagery/user.png)
+
+The "artist" collection stores all the information that the user adds about himself/herself.
+Those data are used to display artists' profiles, and are connected through the field "created_by" to the user collection.
+In this way, when a user log in with his/her credentials, is able to edit and delete his/her own information.
+
+![Artist Database](static/documents/imagery/artist.png)
 
 ---
 
