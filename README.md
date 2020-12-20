@@ -10,11 +10,11 @@ The structure of the website is divided into two: one area is visible to all use
 View the live project here. [Get My Tattoo](https://getmytattoo.herokuapp.com/get_artists)
 
 
-### Base Page
+### :page_with_curl: Base Page
 
 The base page has elements that all the pages have in common, which are a sticky navbar with collapsible toggler and a search box, plus a footer.
 
-### Home Page
+### :page_with_curl: Home Page
 
 The home page welcomes the users and explains briefly what the website is about.
 Then a section with four cards shows some tattoo styles to inspire users, but also to guide them through the navigation. Many times users don’t have a clear idea in mind and need a guide to help them to start the navigation.
@@ -26,7 +26,7 @@ All users can access this page and search freely the database.
 
 ![Last Added Artists](static/documents/imagery/lastAdded.png)
 
-### Search Page
+### :page_with_curl: Search Page
 
 
 The search page displays the results of the user's research.
@@ -37,25 +37,25 @@ In case the user wants to know more about one tattoo artist, there is a link at 
 A target attribute has been added to the link that leads to the artist's page: in this way the user doesn't lose the search results if clicks on a link.
 
 
-### All Artists
+### :page_with_curl: All Artists
 
 This page displays all the artists in the database, in alphabetical order.
 
-### Show Styles
+### :page_with_curl: Show Styles
 
 That page displays a list of artists who share the same tattoo style.
 
 The layout is the same as the artists' section on the home page.
 
 
-### Show Artist Page
+### :page_with_curl: Show Artist Page
 
 This page displays all the information about a single artist.
 Here users can find the address, the contact area, information about the languages that the artist speaks, the style he/she has, and a gallery with up to six images showing some of the best work of art the artist made.
 A bottom at the end of the page takes the user back to the home page. 
 
 
-### Register - if the user is a tattoo artist
+### :page_with_curl: Register - if the user is a tattoo artist
 
 The register page has an image on the background of a bearded tattooed man that looks in the direction of the form.
 The form has two fields: username (that accept letters from the Latin alphabet and numbers) and password (with a length between 5 and 20 char).
@@ -63,13 +63,13 @@ A small text under the section has a link to the login page for those users that
 
 ![Register Mockup](static/documents/imagery/registerMockup.png)
 
-### Log In - only for tattoo artists
+### :page_with_curl: Log In - only for tattoo artists
 
 This page repeats the same structure as the register page.
 If a user writes a wrong username or a wrong password, a message tells that there is some mistake.
 
 
-### Add profile - only for tattoo artists
+### :page_with_curl: Add profile - only for tattoo artists
 
 This page is visible only after a user registered his/her profile and is not available from the menu.
 That because a user is allowed to have only one profile.
@@ -91,7 +91,7 @@ A form with all the fields needed is shown. Here the tattoo artist can add:
 A button lets the user save the profile.
 
 
-### Edit profile - only for tattoo artists
+### :page_with_curl: Edit profile - only for tattoo artists
 
 This page takes the same layout of the “Add profile”, but instead of having empty fields, it shows the values that the user already added before.
 Clicking on the fields, the user can delete the content and type something new.
@@ -99,7 +99,7 @@ At the bottom of the page, there are two buttons: one allows the user to save th
 
 ![Edit Profile Mockup](static/documents/imagery/editmockup.png)
 
-### Delete profile - only for tattoo artists
+### :page_with_curl: Delete profile - only for tattoo artists
 
 This page allows the tattoo artist to delete his/her profile.
 However, to prevent unintentional deleting, I added an extra step. 
@@ -109,7 +109,7 @@ If the user changes his/her mind and wants to go back, a button guides him/her t
 ![Delete Mockup](static/documents/imagery/deleteMockup.png)
 
 
-### My profile - only for tattoo artists
+### :page_with_curl: My profile - only for tattoo artists
 
 This page shows the artist’s page with the information that he/she provided.
 A button allows the user to edit the profile (linking to the “Edit profile” page, and one button to delete it (linking as I mentioned before to the “Delete” page.
@@ -318,6 +318,10 @@ Other things to implement in the future, are better accessibility and pagination
 
 Another thing will be adding custom meta content for description for each page, using Jinja language.
 
+A limit of the search functionality right now is that users can search for a single word.
+
+If a user wanted to add some filters (for instance, search for an artist who has a specific style in a specific city), right now it is not possible. So this is something that needs to be implemented.
+
 ---
 
 ## Technologies Used
@@ -418,6 +422,71 @@ I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) a
 
 
 ### Usability Testing
+
+#### First Time Visitor Goals
+
+* As a user interested in tattoos, I want to find easily information about tattoo artists in my area.
+
+When I enter the website, I scroll down the page and I see the images and the titles of the sections. 
+I see that there is a search box, but I take a look first at the navigation bar in case I find something extra. On the navigation bar, I find another search box, so I try to type the city that I am looking for.
+If the results are positive, tattoo artists working in my city are displayed on the page. From here, I can click on their profile so I can find out more information and eventually contact them.
+If there are no results, I get a message on the screen that informs me to try with another word.
+
+* As a user interested in tattoos, I want to find easily information about tattoo artists specializing in a particular tattoo style.
+
+When I enter the website, I scroll down the page and I see the images and the titles of the sections. 
+I find immediately a section displaying four cards with four different tattoo styles. The title tells me that this is just a selection of styles, so I understand that if the style I am looking for is not displayed here, I have to search somewhere else.
+Just below this section, I find a search box, which I can see also on the navigation bar. I try to type a specific style I am looking for, and if the results are positive, all the artists specialized in my favourite style are displayed on the page. From here, I can click on their profile so I can find out more information and eventually contact them.
+If there are no results, I get a message on the screen that informs me to try with another word.
+If instead one of the cards in the home page is exactly what I was looking for, I can just click on the button “See All” and I get the results on the page without typing in the search box.
+However, I might get results about artists that live too far away from me. I am not interested in them if I am not willing to travel, and I feel I need to waste time to understand if someone of them is close to me.
+ 
+* As a user interested in tattoos, I want to find easily information about tattoo artists that speak my language.
+
+When I enter the website, I scroll down the page and I see the images and the titles of the sections. 
+I see that there is a search box, but I take a look first at the navigation bar in case I find something extra. On the navigation bar, I find another search box, so I try to type the language that I am looking for.
+If the results are positive, tattoo artists speaking my language are displayed on the page. From here, I can click on their profile so I can find out more information and eventually contact them.
+If there are no results, I get a message on the screen that informs me to try with another word.
+ 
+* As a user interested in tattoos, I want to browse the database just to have a look at tattoos pictures.
+
+I enter the website and I start by scrolling down the page. I might be attracted by one of the images I see here, so I click on its link to see more content related. If nothing impresses me, I take a look at the navigation bar. I find a page called “All artist” and I click on it. Here I have plenty of images.
+
+* As a tattoo artist, I want to add my profile to get new customers.
+
+I enter the website and first of all I have a look at the navigation bar. I see the words “Are you an artist?”, so I understand I have to click on it. Here, I find two pages: “register” and “login”. Since I am new to the website, I click on “register” and I am redirected to the proper registration page.
+The fields are easy to fill and immediately after saving I am redirected to the page “Add profile”. Here I find a form that asks me to fill out all the information needed, from name to gallery images.
+In this form, some fields have an asterisk. I guess it means they are mandatory, but to be sure I scroll the page up and down to find more details. At the beginning of the page, just before the form, a message informs me that fields with an asterisk are required. I then proceed to add the details and I save them.
+If all the information were correctly added, the form is submitted and as confirmation, I am redirected to “My Profile” page. Is something is missing or wrong, I get a feedback under each field telling me if the field is ok or not. The green feedback says “Great!”, so I understand that this information is ok. If not, the red message helps me to understand which might be the problem. 
+
+* As a tattoo artist, I want to have a look at my competitors' works.
+
+I open the website and I scroll down the page. I take a look at the last 5 artists added, then I scroll to the top and I click on the cards with different styles.
+I also use the search box to search for something in particular, or I visit the page “All Artists”.
+
+* As a tattoo artist, I want to contact the owner of the website.
+
+I am on the home page. I can’t find any particular information on the navbar, so I scroll down the page. At the bottom, on the footer, I find a link that allows me to send an email to the website owner.
+
+
+#### Returning Visitor Goals
+
+* As a user interested in tattoos, I want to contact a specific tattoo artist.
+
+I type in the search box the name of the artist that I want to contact. If the artist is in the database, I can see his profile page. From here, I can click on one of the four links that I can use to contact the artist: phone, email, Facebook, Instagram.
+
+* As a user interested in tattoos, I want to have a look at the last added tattoo artists.
+
+I scroll down the home page until I reach the section “last added”.
+
+* As a tattoo artist, I want to edit my profile.
+
+I log in and I am redirected to “My Profile” page. Here, at the bottom, I have a button that takes me to the “Edit” page. I can also access this page from the navigation bar.
+A form with prefilled fields displays my information previously added. I click on the fields that I want to edit and then I save the page.
+
+* As a tattoo artist, I want to delete my profile.
+
+I log in and I am redirected to “My Profile” page. Here, at the bottom, I have a button that takes me to the “Delete” page. A message asks me if I am really sure that I want to delete my profile. If I changed my mind, I can click on the “take me back” button, otherwise, I go on clicking on the “delete” button.
 
 
 ### Compatibility Testing
