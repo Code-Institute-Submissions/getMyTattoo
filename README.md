@@ -416,9 +416,15 @@ I checked if the navbar highlights the right name of the page, and also this fun
 
 Html and Css have been validated with HTML Validator and CSS Validator.
 
-I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) and the result was positive:
+I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) and the result was positive for app.py:
 
-![Testing Form Validation](static/documents/imagery/pep8.png)
+![Pep8 compliant result](static/documents/imagery/pep8.png)
+
+I checked also env.py, and I got this result:
+
+![Pep8 compliant result](static/documents/imagery/envpy.png)
+
+However, this is not a problem since the env.py file is ignored.
 
 
 ### Usability Testing
@@ -510,8 +516,15 @@ Here an example of an artist page on as it renders on IPhone 6/7/8/Plus:
 
 The website performs well both on mobile screens and desktop; however, accessibility needs to be improved.
 
-Speed could be improved: taking images from external urls have impact on the loading speed, since they are not optimized for the website.
-This could also have a negative impact for those users that have to pay for more cellular data.
+To improve speed I added lazy loading by adding loading="lazy" to all my images.
+
+This is the result for the mobile version with Lighthouse:
+
+![Lighthouse mobile testing](static/documents/imagery/lighthouseMobile.png)
+
+And this is the result for the desktop version:
+
+![Lighthouse mobile testing](static/documents/imagery/lighthouseDesktop.png)
 
 To check performance testing I used Google Test Mobile Friendly, Google Lighthouse and Google PageSpeed Insights for the home page and all-artists page.
 
