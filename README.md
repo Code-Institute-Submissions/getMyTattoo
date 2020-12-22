@@ -514,6 +514,8 @@ Here an example of an artist page on as it renders on IPhone 6/7/8/Plus:
 
 ### Performance Testing
 
+To check performance testing I used Google Test Mobile Friendly, Google Lighthouse and Google PageSpeed Insights for the home page and all-artists page.
+
 The website performs well both on mobile screens and desktop; however, accessibility needs to be improved.
 
 To improve speed I added lazy loading by adding loading="lazy" to all my images.
@@ -526,7 +528,17 @@ And this is the result for the desktop version:
 
 ![Lighthouse mobile testing](static/documents/imagery/lighthouseDesktop.png)
 
-To check performance testing I used Google Test Mobile Friendly, Google Lighthouse and Google PageSpeed Insights for the home page and all-artists page.
+The website is mobile friendly, as tested with [Google Test Mobile Friendly](https://search.google.com/test/mobile-friendly):
+
+![Google Test Mobile Friendly testing](static/documents/imagery/mobileFriendly.png)
+
+[Google PageSpeed Insight](https://developers.google.com/speed/pagespeed/insights/) showed that the website needs to improve the speed on mobile devices.
+This is due especially to images that are loaded from external servers.
+This might also be a problem for those users that have to pay for extra data.
+
+![Google PageSpeed Insight Mobile testing](static/documents/imagery/mobileSpeed.png)
+
+![Google PageSpeed Insight Desktop testing](static/documents/imagery/desktopSpeed.png)
 
 
 ### Bugs
