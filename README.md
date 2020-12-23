@@ -31,7 +31,7 @@ All users can access this page and search freely the database.
 
 The search page displays the results of the user's research.
 
-For each result, there is a row with a profile picture of the tattoo artist (on the left), an information section (on the center) displaying the name of the artist and his/her biography, and a carousel (on the right) with three pictures of the artists’ tattoos.
+For each result, there is a row with a profile picture of the tattoo artist (on the left), an information section (on the centre) displaying the name of the artist and his/her biography, and a carousel (on the right) with three pictures of the artists’ tattoos.
 In this way, the user can understand at a glance if the tattoo artist might be of interest, or not. 
 In case the user wants to know more about one tattoo artist, there is a link at the bottom of the central information section that leads directly to the artist page.
 A target attribute has been added to the link that leads to the artist's page: in this way the user doesn't lose the search results if clicks on a link.
@@ -72,7 +72,7 @@ If a user writes a wrong username or a wrong password, a message tells that ther
 ### :page_with_curl: Add profile - only for tattoo artists
 
 This page is visible only after a user registered his/her profile and is not available from the menu.
-That because a user is allowed to have only one profile.
+That happens because a user is allowed to have only one profile.
 
 A form with all the fields needed is shown. Here the tattoo artist can add:
 * name
@@ -205,7 +205,7 @@ While coding I changed a little bit the layout because new ideas came to my mind
 
 * **:bookmark_tabs: Surface Plane**
 
-The absence of colours is dominant in this website.
+The absence of colours is dominant on this website.
 
 I decided to make black and grey the main characters of the design because I wanted to give the feeling of ink and tattoos on the screen.
 
@@ -215,7 +215,7 @@ I decided to make black and grey the main characters of the design because I wan
 #### :computer: First Time Visitor Goals
 
 * As a user interested in tattoos, I want to find easily information about tattoo artists in my area.
-* As a user interested in tattoos, I want to find easily information about tattoo artists specialized in a particular tattoo style.
+* As a user interested in tattoos, I want to find easily information about tattoo artists specializing in a particular tattoo style.
 * As a user interested in tattoos, I want to find easily information about tattoo artists that speak my language.
 * As a user interested in tattoos, I want to browse the database just to have a look at tattoos pictures.
 
@@ -312,7 +312,7 @@ Globally, the website is easily readable, links are easy to understand.
 
 I would like to add an admin dashboard, where an admin can perform various tasks and keep track of users' activity.
 
-I would like also to connect the website with a payment system, to make the log in function accessible only to users that have paid a fee.
+I would like also to connect the website with a payment system, to make the login function accessible only to users that have paid a fee.
 
 Other things to implement in the future, are better accessibility and pagination, plus an improved styling for extra-small screens.
 
@@ -376,7 +376,7 @@ This is something I will implement in the future.
 
 The register functionality works properly, it displays the "app-profile" page which is reachable only after a new user registers.
 
-After adding the informations, I have tried to edit successfully the profile: all the previous informations added by the user are visible inside the input areas, and it is possible to edit them.
+After adding the pieces of information, I have tried to edit successfully the profile: all the previous information added by the user are visible inside the input areas, and it is possible to edit them.
 
 ![Testing Form Validation](static/documents/imagery/test2.png)
 
@@ -390,7 +390,7 @@ It is still possible for the user to show again his/her profile simply clicking 
 
 ![Testing Form Validation](static/documents/imagery/testNoprofile.png)
 
-An empty profile is displayed, and the user needs only to edit it again with new informations.
+An empty profile is displayed, and the user needs only to edit it again with new information.
 
 If a user wants to delete also his/her username, he/she should contact the website owner. This is easy to do, since in the footer there is a link to contact the webmaster.
 
@@ -414,7 +414,7 @@ Everything works as expected.
 
 I checked if the navbar highlights the right name of the page, and also this functionality works fine.
 
-Html and Css have been validated with HTML Validator and CSS Validator.
+Html and CSS have been validated with HTML Validator and CSS Validator.
 
 I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) and the result was positive for app.py:
 
@@ -505,9 +505,9 @@ The functionality is working everywhere, but there are a few things that need to
 
 ![Error 2](static/documents/imagery/error2.png)
 
-On other mobile devices with a bigger width, everything is displayed as expected.
+On other mobile devices with bigger width, everything is displayed as expected.
 
-Here an example of an artist page on as it renders on IPhone 6/7/8/Plus:
+Here an example of an artist page on as it renders on iPhone 6/7/8/Plus:
 
 ![Error 2](static/documents/imagery/example.png)
 
@@ -520,15 +520,15 @@ The website performs well both on mobile screens and desktop; however, accessibi
 
 To improve speed I added lazy loading by adding loading="lazy" to all my images.
 
-This is the result for the mobile version with Lighthouse:
+This is the result of the mobile version with Lighthouse:
 
 ![Lighthouse mobile testing](static/documents/imagery/lighthouseMobile.png)
 
-And this is the result for the desktop version:
+And this is the result of the desktop version:
 
 ![Lighthouse mobile testing](static/documents/imagery/lighthouseDesktop.png)
 
-The website is mobile friendly, as tested with [Google Test Mobile Friendly](https://search.google.com/test/mobile-friendly):
+The website is mobile-friendly, as tested with [Google Test Mobile Friendly](https://search.google.com/test/mobile-friendly):
 
 ![Google Test Mobile Friendly testing](static/documents/imagery/mobileFriendly.png)
 
@@ -558,7 +558,7 @@ The password is hashed through Werkzeug.
 
 The "artist" collection stores all the information that the user adds about himself/herself.
 Those data are used to display artists' profiles, and are connected through the field "created_by" to the user collection.
-In this way, when a user log in with his/her credentials, is able to edit and delete his/her own information.
+In this way, when a user logs in with his/her credentials, can edit and delete his/her own information.
 
 ![Artist Database](static/documents/imagery/artist.png)
 
