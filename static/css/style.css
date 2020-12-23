@@ -627,3 +627,41 @@ footer{
         text-align: justify;
     }
 }
+
+@media (max-width: 320px) {
+    .card-img-top {
+    height: 24rem;
+    }
+
+    img.img-panel.profile-pic{
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        display: block;
+    }
+
+    p.welcome-text{
+        display: none;
+    }
+
+    h5.card-title.scroll, p.card-text.scroll, a.link{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    h5{
+        padding: 3rem;
+    }
+
+    img.card-img-top.img-panel{
+        height: 30rem;
+    }
+
+    a.navbar-brand.logo{
+        margin: auto;
+    }
+
+    h1{
+        margin-bottom: 3rem;
+    }
+}
