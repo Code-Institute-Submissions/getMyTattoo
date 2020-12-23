@@ -566,7 +566,89 @@ In this way, when a user log in with his/her credentials, is able to edit and de
 
 ## Deployment
 
+The website is deployed connecting Heroku with GitHub.
 
+This was possible through those steps:
+
+* First of all, Heroku needs some files that you have to create in your IDE (I used GitPod).
+  From your command line, type 
+  ```python
+  pip3 freeze --local > requirements.txt
+  ```
+  
+  This will create a file with all the environment's current package list.
+
+* Second, always from your command line, type 
+    ```python
+    echo web: python app.py > Procfile
+    ```
+    Make sure to write "Procfile" with a capital letter.
+    This file tells Heroku which commands are run by your application.
+
+* Now open [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=EAIaIQobChMI9er8_Ybk7QIVQSgYCh2PogLPEAAYASAAEgIkhfD_BwE) and create your account.
+
+* After you logged in with your account, you need to click on the button "New" and select "create new app":
+
+    ![Deployment step 1](static/documents/deployment/new.png)
+
+* Now, choose a name for your app (use only lowercases and a dash or a minus if you need to separate words), select a region and click on the button "Create app".
+
+    ![Deployment step 2](static/documents/deployment/create.png)
+
+* From your dashboard, now click on the tab "Deploy".
+    Click on the "GitHub" button:
+
+    ![Deployment step 3](static/documents/deployment/github.png)
+
+    Your GitHub profile will appear with a search box on the right. It is intended of course that you already have a repo on GitHub.
+    Now type the name of your repo in this search box and click on "search".
+
+    Now you can connect Heroku with GitHub simply by clicking on the "connect" button.
+
+    ![Deployment step 4](static/documents/deployment/button.png)
+
+* Great!
+
+    Now you need to add some extra information.
+
+    Click on the "settings" tab and scroll down to the "Config Vars" section. Click on "Reveal Config Vars".
+
+    ![Deployment step 5](static/documents/deployment/revealConfig.png)
+
+* Now you need to add some parameters.
+
+    ![Deployment step 6](static/documents/deployment/configVars.png)
+
+    From your env.py file, just copy and paste the information.
+
+    As default, we set the value for IP to 0.0.0.0 and for PORT to 5000.
+
+* Next step: we have to push the files to the repo.
+
+    To do so, from your command line type:
+
+    ```python
+    git add requirements.txt
+    ```
+    ```python
+    git commit -m "Add requirements.txt"        
+    ```
+    ```python
+    git add Procfile
+    ```
+    ```python
+    git commit -m "Add Procfile"
+    ```
+    ```python
+    git push
+    ```
+* Now, go back to Heroku and go back to the "Deploy" area.
+
+    Click on "Enable Automatic Deploys" and after that "Deploy branch".
+
+* After a couple of minutes you will get the message that "your app was successfully deployed".
+
+* Just click on "view" and you will see your website.
 
 
 ---
