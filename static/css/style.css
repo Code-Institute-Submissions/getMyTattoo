@@ -649,6 +649,11 @@ footer{
         padding-right: 2rem;
     }
 
+    h5.card-title{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     h5{
         padding: 3rem;
     }

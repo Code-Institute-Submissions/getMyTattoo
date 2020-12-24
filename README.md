@@ -505,6 +505,13 @@ The functionality is working everywhere, but there are a few things that need to
 
 ![Error 2](static/documents/imagery/error2.png)
 
+After fixing the issues with the resolutions on screens smaller than 320px, this is how it looks:
+
+![Fixed Home Page](static/documents/imagery/fixedProfile.png)
+
+![Fixed Profile](static/documents/imagery/fixedHome.png)
+
+
 On other mobile devices with bigger width, everything is displayed as expected.
 
 Here an example of an artist page on as it renders on iPhone 6/7/8/Plus:
