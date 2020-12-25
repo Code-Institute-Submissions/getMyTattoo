@@ -578,6 +578,24 @@ p.text-form.text-upload{
 
 /* Footer */
 
+ul.pagination{
+    justify-content: center;
+}
+
+.page-link{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color .3s;
+    color: black;
+}
+
+li.page-item.active a.page-link{
+    background-color: #333333;
+    border: 1px solid #e1e1e1;
+}
+
+/* Footer */
+
 footer{
     padding-top: 3rem;
 }

@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_paginate import Pagination, get_page_args
 if os.path.exists("env.py"):
     import env
 
@@ -32,8 +33,27 @@ def get_artists():
 # Show All the Artists in the database, in alphabetical order
 @app.route("/all_artists")
 def all_artists():
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+
+    per_page = 5
+
+    offset = page * per_page - per_page
+
+    total = mongo.db.artists.find().count()
+
     artists = list(mongo.db.artists.find().sort("artist_name", 1))
-    return render_template("all-artists.html", artists=artists)
+
+    pagination_artists = artists[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page,
+                            offset=offset, total=total,
+                            css_framework='bootstrap4')
+
+    return render_template("all-artists.html", artists=pagination_artists,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination)
 
 
 # Search Functionality
