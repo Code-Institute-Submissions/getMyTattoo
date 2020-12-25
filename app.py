@@ -3,7 +3,6 @@ from flask import (Flask, flash,
                    render_template, redirect, request,
                    session, url_for)
 from flask_pymongo import PyMongo
-from flask_bootstrap import Bootstrap
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_paginate import Pagination, get_page_args
@@ -18,8 +17,6 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-
-bootstrap = Bootstrap(app)
 
 
 # Home Page
