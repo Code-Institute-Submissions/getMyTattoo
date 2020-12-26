@@ -40,6 +40,7 @@ A target attribute has been added to the link that leads to the artist's page: i
 ### :page_with_curl: All Artists
 
 This page displays all the artists in the database, in alphabetical order.
+The results are paginated 5 at a time.
 
 ### :page_with_curl: Show Styles
 
@@ -314,13 +315,13 @@ I would like to add an admin dashboard, where an admin can perform various tasks
 
 I would like also to connect the website with a payment system, to make the login function accessible only to users that have paid a fee.
 
-Other things to implement in the future, are better accessibility and pagination, plus an improved styling for extra-small screens.
+Other things to implement in the future, are better accessibility and pagination also on search results.
 
 Another thing will be adding custom meta content for description for each page, using Jinja language.
 
 A limit of the search functionality right now is that users can search for a single word.
+If a user wants to add extra filters (for instance, search for an artist who has a specific style in a specific city), right now it is not possible. So this is something that needs to be implemented.
 
-If a user wanted to add some filters (for instance, search for an artist who has a specific style in a specific city), right now it is not possible. So this is something that needs to be implemented.
 
 ---
 
@@ -547,6 +548,20 @@ This might also be a problem for those users that have to pay for extra data.
 ![Google PageSpeed Insight Mobile testing](static/documents/imagery/mobileSpeed.png)
 
 ![Google PageSpeed Insight Desktop testing](static/documents/imagery/desktopSpeed.png)
+
+I decided to add pagination to the "All artists" page. In this way it is simpler for a user to navigate through the results, without having to keep scrolling down the page.
+I tested again the page and the results are now slighlty different with Lightroom.
+
+This is the new result for the mobile version:
+
+![Google PageSpeed Insight Desktop testing](static/documents/imagery/newmobile.png)
+
+And this is the new result for the desktop version:
+
+![Google PageSpeed Insight Desktop testing](static/documents/imagery/newDesktop.png)
+
+Best practices improved very much, but SEO needs now to be improved. 
+This happened because pagination links right now cannot be crawled.
 
 
 ### Bugs
