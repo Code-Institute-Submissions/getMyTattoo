@@ -351,6 +351,7 @@ If a user wanted to add some filters (for instance, search for an artist who has
 * Flask-PyMongo 2.3.0
 * pymongo 3.11.1
 * Werkzeug 1.0.1
+* flask-paginate 0.7.1
 * MongoDB
 * Autoprefixer CSS 9.7.6
 * Am I responsive?
