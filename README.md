@@ -279,7 +279,24 @@ Shadows Into Light, which is a cursive font, has been used for flashed messages 
 
 ### Imagery
 
-Images have been taken mostly from other tattoo websites or artists' real profiles.
+Images have been taken mostly from other tattoo websites (especially [Tattodoo](https://www.tattoodo.com/)) or artists' real profiles.
+
+In the home page, the hero image comes from:
+
+* https://nextluxury.com/wp-content/uploads/Tattoo-Artist-Black-Gloves-Back-Tattoo-Black-Ink-scaled.jpg
+
+
+The four images used in the "style" cards are taken from:
+
+* https://tattoodo-mobile-app.imgix.net/images/posts/20200115_SQFjyld99NGCSOy.jpg
+* https://tattoo-ideas.com/wp-content/uploads/2020/11/samurai-medusa.jpg
+* https://www.wykop.pl/cdn/c3201142/comment_1587243214rxE3dEaOjgx1LCG4t1HV4Y.jpg
+* https://inkppl.com/assets/php/files/082018/38913976_702864310048924_7109833061583290368_n.jpg
+
+
+In the register/login template, the background image comes from: 
+
+* https://cdn.shopify.com/s/files/1/1114/8720/products/SPIZOIKY-X-SEVEN50_1800x1800.jpg?v=1569067922
 
 
 ### Wireframes
@@ -566,7 +583,7 @@ This happened because pagination links right now cannot be crawled.
 
 ### Bugs
 
-As previously mentioned, there are some problems with styling on extra-small screens that need to be fixed.
+A better validation needs to be implemented, including styling with validation feedback on smaller screens.
 
 ---
 
@@ -683,6 +700,7 @@ This was possible through those steps:
 * Custom validation JavaScript code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#custom-styles)
 * Scrolling animation from [ScrollReveal.js](https://scrollrevealjs.org/)
 * Changed placeholder style adapting the code from [W3School](https://www.w3schools.com/howto/howto_css_placeholder.asp)
+* Pagination code adapted from [Stephen Moody's -Code Institute- repo](https://github.com/DarilliGames/flaskpaginate)
 
 ### Media
 
