@@ -518,8 +518,9 @@ div.container.profile-container{
     padding-right: 3rem;
 }
 
-.icon-profile.link:hover{
+a.link .icon-profile:hover{
     text-decoration: none;
+    color: #e1e1e1;
 }
 
 img{
