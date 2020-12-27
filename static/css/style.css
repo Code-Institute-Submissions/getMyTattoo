@@ -580,7 +580,9 @@ p.text-form.text-upload{
 /* Pagination */
 
 ul.pagination{
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 ul.pagination > *{
@@ -594,6 +596,8 @@ li a.page-link:hover{
 .page-link, .page-item{
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
     transition: background-color .5s;
     color: #e1e1e1;
     background-color: black;
@@ -675,10 +679,10 @@ footer{
         text-align: justify;
     }
     .page-link, .page-item{
-    font-size: 1.2rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.2rem;
+        font-size: 1.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.2rem;
 }
 }
 
@@ -690,7 +694,8 @@ footer{
     img.img-panel.profile-pic{
         width: 100%;
         height: 25rem;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         display: block;
     }
 
