@@ -368,6 +368,7 @@ If a user wants to add extra filters (for instance, search for an artist who has
 * Favicon.ico
 * Html Validator
 * CSS Validator
+* JSHint
 * Flask 1.1.2
 * Flask-PyMongo 2.3.0
 * pymongo 3.11.1
@@ -388,7 +389,7 @@ If a user wants to add extra filters (for instance, search for an artist who has
 
 All the links are working.
 
-Only an anchor link is working on Firefox (Check "Bugs" section for details).
+Only an anchor link was not working on Firefox (Check "Bugs" section for details).
 
 The form validation is also working, it prevents the user to submit the form with invalid fields and helps to understand which ones need to be corrected.
 
@@ -439,6 +440,8 @@ Everything works as expected.
 I checked if the navbar highlights the right name of the page, and also this functionality works fine.
 
 Html and CSS have been validated with HTML Validator and CSS Validator.
+
+JavaScript has been checked with [JSHint](https://jshint.com/)
 
 I checked if Python is Pep8 compliant on [Pep8 Online](http://pep8online.com/) and the result was positive for app.py:
 
@@ -615,7 +618,10 @@ to:
                     class="fas fa-angle-double-up"></i></p></a>
 ```
 
-but it still doesn't work. This is something that needs to be fixed as soon as possible.
+but it still doesn't work. 
+
+I decided to write a JavaScript code that runs when a user clicks the "To the top" link.
+First, the code detects if the user is using Firefox; then, it scrolls up to the top of the page.
 
 
 Then, a better validation needs to be implemented, including a better styling with validation feedback.
