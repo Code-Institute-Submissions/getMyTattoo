@@ -102,7 +102,7 @@
 
     <!--Footer-->
     <footer class="bg-black center">
-        <a href="#navigation" class="footer-text link"><p class="card-text">To the top <i
+        <a href="#navigation" class="footer-text link" onclick="anchor()"><p class="card-text">To the top <i
                     class="fas fa-angle-double-up"></i></p></a>
         <a class="navbar-brand logo" href="{{ url_for('get_artists') }}">Get My tattoo<br>
             <span>estd &middot; 2020</span>
@@ -113,6 +113,7 @@
     </footer>
 
     <!--Scripts-->
+    <script src="{{ url_for('static', filename='js/anchor.js') }}"></script>
     <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script-scroll.js') }}"></script>
     <script src="{{ url_for('static', filename='js/back.js') }}"></script>

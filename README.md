@@ -388,7 +388,7 @@ If a user wants to add extra filters (for instance, search for an artist who has
 
 All the links are working.
 
-Only an anchor link was not working on Firefox (Check "Bugs" section for details), but the problem has been fixed.
+Only an anchor link is working on Firefox (Check "Bugs" section for details).
 
 The form validation is also working, it prevents the user to submit the form with invalid fields and helps to understand which ones need to be corrected.
 
@@ -598,16 +598,27 @@ This happened because pagination links right now cannot be crawled.
 
 After testing the website on Firefox, I realized that there was a bug in the anchor link inside the footer.
 
-Basically, the link "to the top" didn't work (but it worked on Chrome, Edge, Opera).
+Basically, the link "to the top" doesn't work (but it works on Chrome, Edge, Opera).
 
 ![Bug in Firefor](static/documents/imagery/firefox.png)
 
-The problem was that in my html I placed the paragraph outside the anchor link, when it should have been the opposite:
-the anchor link has to be outside.
+I tried to fix it by switching from:
+```html
+<p class="card-text"><a href="#navigation" class="footer-text link">To the top <i
+                    class="fas fa-angle-double-up"></i></a></p>
+```
 
-I fixed it and now it works.
+to:
 
-A better validation needs to be implemented, including a better styling with validation feedback.
+```html
+<a href="#navigation" class="footer-text link"><p class="card-text">To the top <i
+                    class="fas fa-angle-double-up"></i></p></a>
+```
+
+but it still doesn't work. This is something that needs to be fixed as soon as possible.
+
+
+Then, a better validation needs to be implemented, including a better styling with validation feedback.
 
 For instance, this is what happens:
 
