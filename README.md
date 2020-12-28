@@ -299,6 +299,9 @@ In the register/login template, the background image comes from:
 * https://cdn.shopify.com/s/files/1/1114/8720/products/SPIZOIKY-X-SEVEN50_1800x1800.jpg?v=1569067922
 
 
+All the other images sources are listed here: [Links](static/documents/LINKS.md)
+
+
 ### Wireframes
 
 Wireframes have been made with Adobe XD.
@@ -381,7 +384,7 @@ If a user wants to add extra filters (for instance, search for an artist who has
 
 ## Testing
 
-### Functionality Testing 
+### :heavy_check_mark: Functionality Testing 
 
 All the links are working, both internal and external.
 
@@ -446,7 +449,7 @@ I checked also env.py, and I got this result:
 However, this is not a problem since the env.py file is ignored.
 
 
-### Usability Testing
+### :heavy_check_mark: Usability Testing
 
 #### First Time Visitor Goals
 
@@ -514,7 +517,7 @@ A form with prefilled fields displays my information previously added. I click o
 I log in and I am redirected to “My Profile” page. Here, at the bottom, I have a button that takes me to the “Delete” page. A message asks me if I am really sure that I want to delete my profile. If I changed my mind, I can click on the “take me back” button, otherwise, I go on clicking on the “delete” button.
 
 
-### Compatibility Testing
+### :heavy_check_mark: Compatibility Testing
 
 I tested the website not only on [Am I responsive?](http://ami.responsivedesign.is/), but also on different mobile screens that I have at home.
 
@@ -538,7 +541,7 @@ Here an example of an artist page on as it renders on iPhone 6/7/8/Plus:
 ![Error 2](static/documents/imagery/example.png)
 
 
-### Performance Testing
+### :heavy_check_mark: Performance Testing
 
 To check performance testing I used Google Test Mobile Friendly, Google Lighthouse and Google PageSpeed Insights for the home page and all-artists page.
 
@@ -691,22 +694,46 @@ This was possible through those steps:
 * Just click on "view" and you will see your website.
 
 
+
+#### Fork the code on GitHub
+If you need to work on this code on your own, follow these steps:
+
+* Log in to GitHub;
+* Find the repository you are looking for;
+* On the top-right of the page you will find a button with the name "Fork";
+* Click on it and it will automatically fork the code to your GitHub.
+
+
+#### Local Clone
+To make a local clone of the site, just follow these stepsg:
+
+* Log in to your GitHub;
+* Under your repository section, select the repo that you need;
+* You will find a green button with the name "Code". Click on it;
+* On the dropdown selection, you will find a link to clone the code with HHTPS;
+* Now open Git bash;
+* Open the directory where you want to work on the cloned code;
+* Type git clone followed by the link you have previously copied.
+
+
 ---
 
 ## Credits
 
-### Code
+### :star: Code
 
 * Custom validation JavaScript code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/#custom-styles)
 * Scrolling animation from [ScrollReveal.js](https://scrollrevealjs.org/)
 * Changed placeholder style adapting the code from [W3School](https://www.w3schools.com/howto/howto_css_placeholder.asp)
 * Pagination code adapted from [Stephen Moody's -Code Institute- repo](https://github.com/DarilliGames/flaskpaginate)
 
-### Media
+### :star: Media
 
+Check the Imagery section.
 
+Here you can find a detailed list of all the links used to get images and text for each artist profile: [Links](static/documents/LINKS.md)
 
-### Acknowledgements
+### :star: Acknowledgements
 
 I want to thank my beloved husband for giving me the subject idea for this project. He is a tattoo lover and was always looking for an app like this one.
 
