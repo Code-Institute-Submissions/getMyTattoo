@@ -117,6 +117,13 @@ A button allows the user to edit the profile (linking to the “Edit profile” 
 
 ![Profile Mockup](static/documents/imagery/profilemockup.png)
 
+### :page_with_curl: Page 404 - Not found
+
+I decided to add also a 404 page which I think is always useful to have.
+In this way, if a user forces the URL to a page that doesn't exist, can still go on with the navigation without feeling frustrated.
+
+![Page 404](static/documents/imagery/404page.png)
+
 ---
 
 ## User Experience (UX)
@@ -297,6 +304,10 @@ The four images used in the "style" cards are taken from:
 In the register/login template, the background image comes from: 
 
 * https://cdn.shopify.com/s/files/1/1114/8720/products/SPIZOIKY-X-SEVEN50_1800x1800.jpg?v=1569067922
+
+The image used in the page 404 comes from this website:
+
+* https://cdn.mos.cms.futurecdn.net/VaEe7C4NKKnBt3kKjLjtEU.jpg
 
 
 All the other images sources are listed here: [Links](static/documents/LINKS.md)
