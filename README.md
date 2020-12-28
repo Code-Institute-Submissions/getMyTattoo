@@ -386,7 +386,9 @@ If a user wants to add extra filters (for instance, search for an artist who has
 
 ### :heavy_check_mark: Functionality Testing 
 
-All the links are working, both internal and external.
+All the links are working.
+
+Only an anchor link was not working on Firefox (Check "Bugs" section for details), but the problem has been fixed.
 
 The form validation is also working, it prevents the user to submit the form with invalid fields and helps to understand which ones need to be corrected.
 
@@ -540,6 +542,14 @@ Here an example of an artist page on as it renders on iPhone 6/7/8/Plus:
 
 ![Error 2](static/documents/imagery/example.png)
 
+I tested the website on multiple browsers:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Opera
+
 
 ### :heavy_check_mark: Performance Testing
 
@@ -586,7 +596,22 @@ This happened because pagination links right now cannot be crawled.
 
 ### Bugs
 
-A better validation needs to be implemented, including styling with validation feedback on smaller screens.
+After testing the website on Firefox, I realized that there was a bug in the anchor link inside the footer.
+
+Basically, the link "to the top" didn't work (but it worked on Chrome, Edge, Opera).
+
+![Bug in Firefor](static/documents/imagery/firefox.png)
+
+The problem was that in my html I placed the paragraph outside the anchor link, when it should have been the opposite:
+the anchor link has to be outside.
+
+I fixed it and now it works.
+
+A better validation needs to be implemented, including a better styling with validation feedback.
+
+For instance, this is what happens:
+
+![Bug in Firefor](static/documents/imagery/bug.png)
 
 ---
 
